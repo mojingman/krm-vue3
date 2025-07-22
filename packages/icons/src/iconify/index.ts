@@ -1,6 +1,6 @@
-import { createIconifyIcon } from '@vben-core/icons';
+import { createIconifyIcon } from '@kris-core/icons';
 
-export * from '@vben-core/icons';
+export * from '@kris-core/icons';
 
 export const MdiKeyboardEsc = createIconifyIcon('mdi:keyboard-esc');
 

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, nextTick } from 'vue';
 
-import { VbenButton } from '@vben-core/shadcn-ui';
+import { VbenButton } from '@kris-core/shadcn-ui';
 
 interface Props {
   /**

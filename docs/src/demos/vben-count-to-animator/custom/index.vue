@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { VbenCountToAnimator } from '@vben/common-ui';
+import { VbenCountToAnimator } from '@kris/common-ui';
 </script>
 <template>
   <VbenCountToAnimator

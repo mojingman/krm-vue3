@@ -56,16 +56,16 @@ pnpm install
 ```json
 {
   "scripts": {
-    "build:antd": "pnpm run build --filter=@vben/web-antd",
-    "build:docs": "pnpm run build --filter=@vben/docs",
-    "build:ele": "pnpm run build --filter=@vben/web-ele",
-    "build:naive": "pnpm run build --filter=@vben/web-naive",
-    "build:play": "pnpm run build --filter=@vben/playground",
-    "dev:antd": "pnpm -F @vben/web-antd run dev",
-    "dev:docs": "pnpm -F @vben/docs run dev",
-    "dev:ele": "pnpm -F @vben/web-ele run dev",
-    "dev:play": "pnpm -F @vben/playground run dev",
-    "dev:naive": "pnpm -F @vben/web-naive run dev"
+    "build:antd": "pnpm run build --filter=@kris/web-antd",
+    "build:docs": "pnpm run build --filter=@kris/docs",
+    "build:ele": "pnpm run build --filter=@kris/web-ele",
+    "build:naive": "pnpm run build --filter=@kris/web-naive",
+    "build:play": "pnpm run build --filter=@kris/playground",
+    "dev:antd": "pnpm -F @kris/web-antd run dev",
+    "dev:docs": "pnpm -F @kris/docs run dev",
+    "dev:ele": "pnpm -F @kris/web-ele run dev",
+    "dev:play": "pnpm -F @kris/playground run dev",
+    "dev:naive": "pnpm -F @kris/web-naive run dev"
   }
 }
 ```

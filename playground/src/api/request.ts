@@ -1,19 +1,18 @@
 /**
  * 该文件可自行根据业务逻辑进行调整
  */
-import type { AxiosResponseHeaders, RequestClientOptions } from '@vben/request';
+import type { AxiosResponseHeaders, RequestClientOptions } from '@kris/request';
 
-import { useAppConfig } from '@vben/hooks';
-import { preferences } from '@vben/preferences';
+import { useAppConfig } from '@kris/hooks';
+import { preferences } from '@kris/preferences';
 import {
   authenticateResponseInterceptor,
   defaultResponseInterceptor,
   errorMessageResponseInterceptor,
   RequestClient,
-} from '@vben/request';
-import { useAccessStore } from '@vben/stores';
-import { cloneDeep } from '@vben/utils';
-
+} from '@kris/request';
+import { useAccessStore } from '@kris/stores';
+import { cloneDeep } from '@kris/utils';
 import { message } from 'ant-design-vue';
 import JSONBigInt from 'json-bigint';
 

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Page, useVbenModal } from '@vben/common-ui';
+import { Page, useVbenModal } from '@kris/common-ui';
 
 import { NButton, NCard, useMessage } from 'naive-ui';
 

@@ -6,7 +6,7 @@ import { resolve } from 'node:path';
 import {
   viteArchiverPlugin,
   viteVxeTableImportsPlugin,
-} from '@vben/vite-config';
+} from '@kris/vite-config';
 
 import {
   GitChangelog,
@@ -35,7 +35,7 @@ export const shared = defineConfig({
   srcDir: 'src',
   themeConfig: {
     i18nRouting: true,
-    logo: 'https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp',
+    logo: 'https://mykris.sqlview.com.sg/KRIS/images/KRIS.png',
     search: {
       options: {
         locales: {
@@ -44,12 +44,12 @@ export const shared = defineConfig({
       },
       provider: 'local',
     },
-    siteTitle: 'Vben Admin',
+    siteTitle: 'KRIS KRM',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vbenjs/vue-vben-admin' },
     ],
   },
-  title: 'Vben Admin',
+  title: 'KRIS KRM',
   vite: {
     build: {
       chunkSizeWarningLimit: Infinity,
@@ -75,8 +75,8 @@ export const shared = defineConfig({
       GitChangelog({
         mapAuthors: [
           {
-            mapByNameAliases: ['Vben'],
-            name: 'vben',
+            mapByNameAliases: ['ChenKai'],
+            name: 'chenkai',
             username: 'anncwb',
           },
           {
@@ -128,7 +128,7 @@ function head(): HeadConfig[] {
         name: 'viewport',
       },
     ],
-    ['meta', { content: 'vben admin docs', name: 'keywords' }],
+    ['meta', { content: 'KRIS KRM docs', name: 'keywords' }],
     ['link', { href: '/favicon.ico', rel: 'icon' }],
     // [
     //   'script',
@@ -144,7 +144,7 @@ function pwa(): PwaOptions {
     includeManifestIcons: false,
     manifest: {
       description:
-        'Vben Admin is a modern admin dashboard template based on Vue 3. ',
+        'KRIS KRM is a modern admin dashboard template based on Vue 3. ',
       icons: [
         {
           sizes: '192x192',
@@ -158,7 +158,7 @@ function pwa(): PwaOptions {
         },
       ],
       id: '/',
-      name: 'Vben Admin Doc',
+      name: 'KRIS KRM Doc',
       short_name: 'vben_admin_doc',
       theme_color: '#ffffff',
     },

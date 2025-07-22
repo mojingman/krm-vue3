@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { DrawerPlacement, DrawerState } from '@vben/common-ui';
+import type { DrawerPlacement, DrawerState } from '@kris/common-ui';
 
-import { Page, useVbenDrawer } from '@vben/common-ui';
+import { Page, useVbenDrawer } from '@kris/common-ui';
 
 import { Button, Card } from 'ant-design-vue';
 

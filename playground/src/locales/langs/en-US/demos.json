@@ -50,7 +50,8 @@
     "clipboard": "Clipboard",
     "menuWithQuery": "Menu With Query",
     "openInNewWindow": "Open in New Window",
-    "fileDownload": "File Download"
+    "fileDownload": "File Download",
+    "requestParamsSerializer": "Parameter serialisation"
   },
   "breadcrumb": {
     "navigation": "Breadcrumb Navigation",
@@ -59,7 +60,7 @@
     "level": "Level Mode",
     "levelDetail": "Level Mode Detail"
   },
-  "vben": {
+  "kris": {
     "title": "Project",
     "about": "About",
     "document": "Document",

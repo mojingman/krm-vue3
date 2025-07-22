@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { reactive } from 'vue';
 
-import { Page } from '@vben/common-ui';
-import { Motion, MotionGroup, MotionPresets } from '@vben/plugins/motion';
+import { Page } from '@kris/common-ui';
+import { Motion, MotionGroup, MotionPresets } from '@kris/plugins/motion';
 
 import { refAutoReset, watchDebounced } from '@vueuse/core';
 import {

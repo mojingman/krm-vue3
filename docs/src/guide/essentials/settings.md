@@ -31,10 +31,10 @@
 
 ```bash [.env]
 # 应用标题
-VITE_APP_TITLE=Vben Admin
+VITE_APP_TITLE=KRIS
 
 # 应用命名空间，用于缓存、store等功能的前缀，确保隔离
-VITE_APP_NAMESPACE=vben-web-antd
+VITE_APP_NAMESPACE=kris-web-antd
 ```
 
 ```bash [.env.development]
@@ -107,7 +107,7 @@ Object.defineProperty(window, '_VBEN_ADMIN_PRO_APP_CONF_', {
 
 ### 使用
 
-想要获取 `_app.config.js` 内的变量，需要使用`@vben/hooks`提供的 `useAppConfig`方法。
+想要获取 `_app.config.js` 内的变量，需要使用`@kris/hooks`提供的 `useAppConfig`方法。
 
 ```ts
 const { apiURL } = useAppConfig(import.meta.env, import.meta.env.PROD);
@@ -179,8 +179,8 @@ const { otherApiURL } = useAppConfig(import.meta.env, import.meta.env.PROD);
 如果你找不到文档说明，可以尝试自己配置好以后，点击`复制偏好设置`，覆盖项目默认即可。配置文件位于应用目录下的`preferences.ts`，在这里，你可以覆盖框架默认的配置，实现自定义配置。
 
 ```ts
-import { useAppConfig } from '@vben/hooks';
-import { defineOverridesPreferences } from '@vben/preferences';
+import { useAppConfig } from '@kris/hooks';
+import { defineOverridesPreferences } from '@kris/preferences';
 
 /**
  * @description 项目配置文件
@@ -223,7 +223,7 @@ const defaultPreferences: Preferences = {
     layout: 'sidebar-nav',
     locale: 'zh-CN',
     loginExpiredMode: 'page',
-    name: 'Vben Admin',
+    name: 'KRIS KRM',
     preferencesButtonPosition: 'auto',
     watermark: false,
     zIndex: 200,
@@ -259,7 +259,7 @@ const defaultPreferences: Preferences = {
   logo: {
     enable: true,
     fit: 'contain',
-    source: 'https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp',
+    source: 'https://mykris.sqlview.com.sg/KRIS/images/KRIS.png',
   },
   navigation: {
     accordion: true,

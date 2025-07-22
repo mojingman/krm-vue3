@@ -14,7 +14,7 @@ import type {
   PreferencesButtonPositionType,
   TabsStyleType,
   ThemeModeType,
-} from '@vben-core/typings';
+} from '@kris-core/typings';
 
 type SupportedLanguagesType = 'en-US' | 'zh-CN';
 
@@ -77,6 +77,25 @@ interface AppPreferences {
   watermark: boolean;
   /** z-index */
   zIndex: number;
+}
+
+interface LoginPreferences {
+  /* 是否显示验证码登录 */
+  showCodeLogin: boolean;
+  showForgetPassword: boolean;
+  /* 是否显示二维码登录 */
+  showQrcodeLogin: boolean;
+  /* 是否显示注册按钮 */
+  showRegister: boolean;
+  showRememberMe: boolean;
+  /* 是否显示第三方登录 */
+  showThirdPartyLogin: boolean;
+  /* 提交按钮文本 */
+  submitButtonText: string;
+  /* 登录框子标题 */
+  subTitle: string;
+  /* 登录框标题 */
+  title: string;
 }
 
 interface BreadcrumbPreferences {
@@ -280,6 +299,8 @@ interface Preferences {
   footer: FooterPreferences;
   /** 面包屑配置 */
   header: HeaderPreferences;
+  /* login 配置 */
+  login: LoginPreferences;
   /** logo配置 */
   logo: LogoPreferences;
   /** 导航配置 */
@@ -310,6 +331,7 @@ export type {
   FooterPreferences,
   HeaderPreferences,
   InitialOptions,
+  LoginPreferences,
   LogoPreferences,
   NavigationPreferences,
   Preferences,

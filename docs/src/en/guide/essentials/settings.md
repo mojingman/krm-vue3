@@ -31,10 +31,10 @@ The rules are consistent with [Vite Env Variables and Modes](https://vitejs.dev/
 
 ```bash [.env]
 # Application title
-VITE_APP_TITLE=Vben Admin
+VITE_APP_TITLE=KRIS
 
 # Application namespace, used as a prefix for caching, store, etc., to ensure isolation
-VITE_APP_NAMESPACE=vben-web-antd
+VITE_APP_NAMESPACE=kris-web-antd
 ```
 
 ```bash [.env.development]
@@ -108,7 +108,7 @@ Object.defineProperty(window, '_VBEN_ADMIN_PRO_APP_CONF_', {
 
 ### Usage
 
-To access the variables inside `_app.config.js`, you need to use the `useAppConfig` method provided by `@vben/hooks`.
+To access the variables inside `_app.config.js`, you need to use the `useAppConfig` method provided by `@kris/hooks`.
 
 ```ts
 const { apiURL } = useAppConfig(import.meta.env, import.meta.env.PROD);
@@ -180,8 +180,8 @@ The project offers a wide range of preference settings for dynamically configuri
 If you cannot find documentation for a setting, you can try configuring it yourself and then click `Copy Preferences` to override the project defaults. The configuration file is located in the application directory under `preferences.ts`, where you can override the framework's default configurations to achieve custom settings.
 
 ```ts
-import { useAppConfig } from '@vben/hooks';
-import { defineOverridesPreferences } from '@vben/preferences';
+import { useAppConfig } from '@kris/hooks';
+import { defineOverridesPreferences } from '@kris/preferences';
 
 /**
  * @description Project configuration file
@@ -224,7 +224,7 @@ const defaultPreferences: Preferences = {
     layout: 'sidebar-nav',
     locale: 'zh-CN',
     loginExpiredMode: 'page',
-    name: 'Vben Admin',
+    name: 'KRIS KRM',
     preferencesButtonPosition: 'auto',
     watermark: false,
     zIndex: 200,
@@ -260,7 +260,7 @@ const defaultPreferences: Preferences = {
   logo: {
     enable: true,
     fit: 'contain',
-    source: 'https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp',
+    source: 'https://mykris.sqlview.com.sg/KRIS/images/KRIS.png',
   },
   navigation: {
     accordion: true,

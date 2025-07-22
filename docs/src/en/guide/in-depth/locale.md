@@ -28,9 +28,9 @@ Switching languages consists of two parts:
 - Loading the corresponding language pack
 
 ```ts
-import type { SupportedLanguagesType } from '@vben/locales';
-import { loadLocaleMessages } from '@vben/locales';
-import { updatePreferences } from '@vben/preferences';
+import type { SupportedLanguagesType } from '@kris/locales';
+import { loadLocaleMessages } from '@kris/locales';
+import { updatePreferences } from '@kris/preferences';
 
 async function updateLocale(value: string) {
   // 1. Update preferences
@@ -51,7 +51,7 @@ updateLocale('en-US');
 
 ::: warning Attention
 
-- Do not place business translation texts inside `@vben/locales` to better manage business and general translation texts.
+- Do not place business translation texts inside `@kris/locales` to better manage business and general translation texts.
 - When adding new translation texts and multiple language packs are available, ensure to add the corresponding texts in all language packs.
 
 :::
@@ -64,7 +64,7 @@ To add new translation texts, simply find `src/locales/langs/` in the correspond
 ```json
 {
   "about": {
-    "desc": "Vben Admin 是一个现代的管理模版。"
+    "desc": "KRIS KRM 是一个现代的管理模版。"
   }
 }
 ````
@@ -75,21 +75,21 @@ To add new translation texts, simply find `src/locales/langs/` in the correspond
 ```json
 {
   "about": {
-    "desc": "Vben Admin is a modern management template."
+    "desc": "KRIS KRM is a modern management template."
   }
 }
 ````
 
 ## Using Translation Texts
 
-With `@vben/locales`, you can easily use translation texts:
+With `@kris/locales`, you can easily use translation texts:
 
 ### In Code
 
 ```vue
 <script setup lang="ts">
 import { computed } from 'vue';
-import { $t } from '@vben/locales';
+import { $t } from '@kris/locales';
 
 const items = computed(() => [{ title: $t('about.desc') }]);
 </script>

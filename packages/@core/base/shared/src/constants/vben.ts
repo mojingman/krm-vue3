@@ -1,7 +1,7 @@
 /**
  * @zh_CN GITHUB 仓库地址
  */
-export const VBEN_GITHUB_URL = 'https://github.com/vbenjs/vue-vben-admin';
+export const VBEN_GITHUB_URL = 'https://github.com/mojingman/krm-vue3';
 
 /**
  * @zh_CN 文档地址
@@ -12,10 +12,10 @@ export const VBEN_DOC_URL = 'https://doc.vben.pro';
  * @zh_CN Vben Logo
  */
 export const VBEN_LOGO_URL =
-  'https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp';
+  'https://mykris.sqlview.com.sg/KRIS/images/KRIS.png';
 
 /**
- * @zh_CN Vben Admin 首页地址
+ * @zh_CN KRIS KRM 首页地址
  */
 export const VBEN_PREVIEW_URL = 'https://www.vben.pro';
 

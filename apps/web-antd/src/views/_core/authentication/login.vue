@@ -1,11 +1,12 @@
 <script lang="ts" setup>
-import type { VbenFormSchema } from '@vben/common-ui';
-import type { BasicOption } from '@vben/types';
+import type { VbenFormSchema } from '@kris/common-ui';
+import type { BasicOption } from '@kris/types';
 
 import { computed, markRaw } from 'vue';
 
-import { AuthenticationLogin, SliderCaptcha, z } from '@vben/common-ui';
-import { $t } from '@vben/locales';
+import { AuthenticationLogin, SliderCaptcha, z } from '@kris/common-ui';
+import { $t } from '@kris/locales';
+import { preferences } from '@kris/preferences';
 
 import { useAuthStore } from '#/store';
 
@@ -16,7 +17,7 @@ const authStore = useAuthStore();
 const MOCK_USER_OPTIONS: BasicOption[] = [
   {
     label: 'Super',
-    value: 'vben',
+    value: 'chenkai',
   },
   {
     label: 'Admin',
@@ -30,7 +31,7 @@ const MOCK_USER_OPTIONS: BasicOption[] = [
 
 const formSchema = computed((): VbenFormSchema[] => {
   return [
-    {
+    /* {
       component: 'VbenSelect',
       componentProps: {
         options: MOCK_USER_OPTIONS,
@@ -43,7 +44,7 @@ const formSchema = computed((): VbenFormSchema[] => {
         .min(1, { message: $t('authentication.selectAccount') })
         .optional()
         .default('vben'),
-    },
+    }, */
     {
       component: 'VbenInput',
       componentProps: {
@@ -87,10 +88,23 @@ const formSchema = computed((): VbenFormSchema[] => {
     },
   ];
 });
+// 根据实际需求控制功能
+const showCodeLogin = computed(() => preferences.login.showCodeLogin);
+const showQrcodeLogin = computed(() => preferences.login.showQrcodeLogin);
+const showRegister = computed(() => preferences.login.showRegister);
+const showThirdPartyLogin = computed(
+  () => preferences.login.showThirdPartyLogin,
+);
+const showForgetPassword = computed(() => preferences.login.showForgetPassword);
 </script>
 
 <template>
   <AuthenticationLogin
+    :show-code-login="showCodeLogin"
+    :show-qrcode-login="showQrcodeLogin"
+    :show-register="showRegister"
+    :show-third-party-login="showThirdPartyLogin"
+    :show-forget-password="showForgetPassword"
     :form-schema="formSchema"
     :loading="authStore.loginLoading"
     @submit="authStore.authLogin"

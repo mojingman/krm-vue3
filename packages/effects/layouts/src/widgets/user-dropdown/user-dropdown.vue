@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import type { Component } from 'vue';
 
-import type { AnyFunction } from '@vben/types';
+import type { AnyFunction } from '@kris/types';
 
 import { computed, useTemplateRef, watch } from 'vue';
 
-import { useHoverToggle } from '@vben/hooks';
-import { LockKeyhole, LogOut } from '@vben/icons';
-import { $t } from '@vben/locales';
-import { preferences, usePreferences } from '@vben/preferences';
-import { useAccessStore } from '@vben/stores';
-import { isWindowsOs } from '@vben/utils';
+import { useHoverToggle } from '@kris/hooks';
+import { LockKeyhole, LogOut } from '@kris/icons';
+import { $t } from '@kris/locales';
+import { preferences, usePreferences } from '@kris/preferences';
+import { useAccessStore } from '@kris/stores';
+import { isWindowsOs } from '@kris/utils';
 
-import { useVbenModal } from '@vben-core/popup-ui';
+import { useVbenModal } from '@kris-core/popup-ui';
 import {
   Badge,
   DropdownMenu,
@@ -24,7 +24,7 @@ import {
   DropdownMenuTrigger,
   VbenAvatar,
   VbenIcon,
-} from '@vben-core/shadcn-ui';
+} from '@kris-core/shadcn-ui';
 
 import { useMagicKeys, whenever } from '@vueuse/core';
 
@@ -198,6 +198,7 @@ if (enableShortcutKey.value) {
     </DropdownMenuTrigger>
     <DropdownMenuContent class="mr-2 min-w-[240px] p-0 pb-1">
       <div ref="refContent">
+        <!--    头像    -->
         <DropdownMenuLabel class="flex items-center p-3">
           <VbenAvatar
             :alt="text"
@@ -224,6 +225,7 @@ if (enableShortcutKey.value) {
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator v-if="menus?.length" />
+        <!--   下拉列表的其它item,通过数组传进来的 -->
         <DropdownMenuItem
           v-for="menu in menus"
           :key="menu.text"
@@ -234,6 +236,7 @@ if (enableShortcutKey.value) {
           {{ menu.text }}
         </DropdownMenuItem>
         <DropdownMenuSeparator />
+        <!--   Lock Screen     -->
         <DropdownMenuItem
           v-if="preferences.widget.lockScreen"
           class="mx-1 flex cursor-pointer items-center rounded-sm py-1 leading-8"
@@ -246,6 +249,7 @@ if (enableShortcutKey.value) {
           </DropdownMenuShortcut>
         </DropdownMenuItem>
         <DropdownMenuSeparator v-if="preferences.widget.lockScreen" />
+        <!--   logout     -->
         <DropdownMenuItem
           class="mx-1 flex cursor-pointer items-center rounded-sm py-1 leading-8"
           @click="handleLogout"

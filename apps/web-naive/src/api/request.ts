@@ -1,17 +1,17 @@
 /**
  * 该文件可自行根据业务逻辑进行调整
  */
-import type { RequestClientOptions } from '@vben/request';
+import type { RequestClientOptions } from '@kris/request';
 
-import { useAppConfig } from '@vben/hooks';
-import { preferences } from '@vben/preferences';
+import { useAppConfig } from '@kris/hooks';
+import { preferences } from '@kris/preferences';
 import {
   authenticateResponseInterceptor,
   defaultResponseInterceptor,
   errorMessageResponseInterceptor,
   RequestClient,
-} from '@vben/request';
-import { useAccessStore } from '@vben/stores';
+} from '@kris/request';
+import { useAccessStore } from '@kris/stores';
 
 import { message } from '#/adapter/naive';
 import { useAuthStore } from '#/store';

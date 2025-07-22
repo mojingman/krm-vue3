@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useVbenModal } from '@vben/common-ui';
+import { useVbenModal } from '@kris/common-ui';
 
 import { message } from 'ant-design-vue';
 

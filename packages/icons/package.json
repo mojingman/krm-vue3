@@ -1,11 +1,11 @@
 {
-  "name": "@vben/icons",
-  "version": "5.5.8",
-  "homepage": "https://github.com/vbenjs/vue-vben-admin",
-  "bugs": "https://github.com/vbenjs/vue-vben-admin/issues",
+  "name": "@kris/icons",
+  "version": "1.0.0",
+  "homepage": "https://sqlview.com.sg",
+  "bugs": "https://sqlview.redmineup.com/issues/32485",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vbenjs/vue-vben-admin.git",
+    "url": "git+https://github.com/mojingman/krm-vue3.git",
     "directory": "packages/icons"
   },
   "license": "MIT",
@@ -17,6 +17,6 @@
     }
   },
   "dependencies": {
-    "@vben-core/icons": "workspace:*"
+    "@kris-core/icons": "workspace:*"
   }
 }

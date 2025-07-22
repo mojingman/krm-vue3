@@ -1,12 +1,12 @@
 {
-  "name": "@vben-core/tabs-ui",
-  "version": "5.5.8",
-  "homepage": "https://github.com/vbenjs/vue-vben-admin",
-  "bugs": "https://github.com/vbenjs/vue-vben-admin/issues",
+  "name": "@kris-core/tabs-ui",
+  "version": "1.0.0",
+  "homepage": "https://sqlview.com.sg",
+  "bugs": "https://sqlview.redmineup.com/issues/32485",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vbenjs/vue-vben-admin.git",
-    "directory": "packages/@vben-core/uikit/tabs-ui"
+    "url": "git+https://github.com/mojingman/krm-vue3.git",
+    "directory": "packages/@kris-core/uikit/tabs-ui"
   },
   "license": "MIT",
   "type": "module",
@@ -37,10 +37,10 @@
     }
   },
   "dependencies": {
-    "@vben-core/composables": "workspace:*",
-    "@vben-core/icons": "workspace:*",
-    "@vben-core/shadcn-ui": "workspace:*",
-    "@vben-core/typings": "workspace:*",
+    "@kris-core/composables": "workspace:*",
+    "@kris-core/icons": "workspace:*",
+    "@kris-core/shadcn-ui": "workspace:*",
+    "@kris-core/typings": "workspace:*",
     "@vueuse/core": "catalog:",
     "vue": "catalog:"
   }

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { VbenAvatar } from '@vben-core/shadcn-ui';
-
+import { VbenAvatar } from '@kris-core/shadcn-ui';
+import { $t } from '@kris/locales';
 interface Props {
   avatar?: string;
 }
@@ -29,16 +29,18 @@ withDefaults(defineProps<Props>(), {
     </div>
     <div class="mt-4 flex flex-1 justify-end md:mt-0">
       <div class="flex flex-col justify-center text-right">
-        <span class="text-foreground/80"> 待办 </span>
+        <span class="text-foreground/80"> {{ $t('workspace.todo') }} </span>
         <span class="text-2xl">2/10</span>
       </div>
 
       <div class="mx-12 flex flex-col justify-center text-right md:mx-16">
-        <span class="text-foreground/80"> 项目 </span>
+        <span class="text-foreground/80">
+          {{ $t('workspace.projectCount') }}
+        </span>
         <span class="text-2xl">8</span>
       </div>
       <div class="mr-4 flex flex-col justify-center text-right md:mr-10">
-        <span class="text-foreground/80"> 团队 </span>
+        <span class="text-foreground/80"> {{ $t('workspace.message') }} </span>
         <span class="text-2xl">300</span>
       </div>
     </div>

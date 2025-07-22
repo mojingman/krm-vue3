@@ -1,11 +1,11 @@
 {
-  "name": "@vben/access",
-  "version": "5.5.8",
-  "homepage": "https://github.com/vbenjs/vue-vben-admin",
-  "bugs": "https://github.com/vbenjs/vue-vben-admin/issues",
+  "name": "@kris/access",
+  "version": "1.0.0",
+  "homepage": "https://sqlview.com.sg",
+  "bugs": "https://sqlview.redmineup.com/issues/32485",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vbenjs/vue-vben-admin.git",
+    "url": "git+https://github.com/mojingman/krm-vue3.git",
     "directory": "packages/effects/permissions"
   },
   "license": "MIT",
@@ -20,10 +20,10 @@
     }
   },
   "dependencies": {
-    "@vben/preferences": "workspace:*",
-    "@vben/stores": "workspace:*",
-    "@vben/types": "workspace:*",
-    "@vben/utils": "workspace:*",
+    "@kris/preferences": "workspace:*",
+    "@kris/stores": "workspace:*",
+    "@kris/types": "workspace:*",
+    "@kris/utils": "workspace:*",
     "vue": "catalog:"
   }
 }

@@ -1,21 +1,21 @@
 <script lang="ts" setup>
-import type { NotificationItem } from '@vben/layouts';
+import type { NotificationItem } from '@kris/layouts';
 
 import { computed, ref, watch } from 'vue';
 
-import { AuthenticationLoginExpiredModal } from '@vben/common-ui';
-import { VBEN_DOC_URL, VBEN_GITHUB_URL } from '@vben/constants';
-import { useWatermark } from '@vben/hooks';
-import { BookOpenText, CircleHelp, MdiGithub } from '@vben/icons';
+import { AuthenticationLoginExpiredModal } from '@kris/common-ui';
+import { VBEN_DOC_URL, VBEN_GITHUB_URL } from '@kris/constants';
+import { useWatermark } from '@kris/hooks';
+import { BookOpenText, CircleHelp, MdiGithub } from '@kris/icons';
 import {
   BasicLayout,
   LockScreen,
   Notification,
   UserDropdown,
-} from '@vben/layouts';
-import { preferences } from '@vben/preferences';
-import { useAccessStore, useUserStore } from '@vben/stores';
-import { openWindow } from '@vben/utils';
+} from '@kris/layouts';
+import { preferences } from '@kris/preferences';
+import { useAccessStore, useUserStore } from '@kris/stores';
+import { openWindow } from '@kris/utils';
 
 import { $t } from '#/locales';
 import { useAuthStore } from '#/store';
@@ -130,7 +130,7 @@ watch(
         :avatar
         :menus
         :text="userStore.userInfo?.realName"
-        description="ann.vben@gmail.com"
+        description="chenkai@sqlview.cn"
         tag-text="Pro"
         @logout="handleLogout"
       />

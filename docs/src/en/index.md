@@ -4,12 +4,12 @@ layout: home
 sidebar: false
 
 hero:
-  name: Vben Admin
+  name: KRIS KRM
   text: Enterprise-Level Management System Framework
   tagline: Fully Upgraded, Ready to Use, Simple and Efficient
   image:
-    src: https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp
-    alt: Vben Admin
+    src: https://mykris.sqlview.com.sg/KRIS/images/KRIS.png
+    alt: KRIS KRM
   actions:
     - theme: brand
       text: Get Started ->

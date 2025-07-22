@@ -1,4 +1,4 @@
-import '@vben/styles';
+import '@kris/styles';
 
 import './variables.css';
 import './base.css';

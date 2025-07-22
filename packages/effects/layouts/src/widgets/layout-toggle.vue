@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import type { AuthPageLayoutType } from '@vben/types';
+import type { AuthPageLayoutType } from '@kris/types';
 
-import type { VbenDropdownMenuItem } from '@vben-core/shadcn-ui';
+import type { VbenDropdownMenuItem } from '@kris-core/shadcn-ui';
 
 import { computed } from 'vue';
 
-import { InspectionPanel, PanelLeft, PanelRight } from '@vben/icons';
-import { $t } from '@vben/locales';
+import { InspectionPanel, PanelLeft, PanelRight } from '@kris/icons';
+import { $t } from '@kris/locales';
 import {
   preferences,
   updatePreferences,
   usePreferences,
-} from '@vben/preferences';
+} from '@kris/preferences';
 
-import { VbenDropdownRadioMenu, VbenIconButton } from '@vben-core/shadcn-ui';
+import { VbenDropdownRadioMenu, VbenIconButton } from '@kris-core/shadcn-ui';
 
 defineOptions({
   name: 'AuthenticationLayoutToggle',

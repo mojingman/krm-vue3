@@ -1,11 +1,11 @@
-import type { MenuRecordRaw } from '@vben/types';
+import type { MenuRecordRaw } from '@kris/types';
 
 import { computed, onBeforeMount, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 
-import { preferences, usePreferences } from '@vben/preferences';
-import { useAccessStore } from '@vben/stores';
-import { findRootMenuByPath } from '@vben/utils';
+import { preferences, usePreferences } from '@kris/preferences';
+import { useAccessStore } from '@kris/stores';
+import { findRootMenuByPath } from '@kris/utils';
 
 import { useNavigation } from './use-navigation';
 

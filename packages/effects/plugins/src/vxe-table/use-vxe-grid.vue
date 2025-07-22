@@ -10,7 +10,7 @@ import type {
 
 import type { SetupContext } from 'vue';
 
-import type { VbenFormProps } from '@vben-core/form-ui';
+import type { VbenFormProps } from '@kris-core/form-ui';
 
 import type { ExtendedVxeGridApi, VxeGridProps } from './types';
 
@@ -25,19 +25,19 @@ import {
   watch,
 } from 'vue';
 
-import { usePriorityValues } from '@vben/hooks';
-import { EmptyIcon } from '@vben/icons';
-import { $t } from '@vben/locales';
-import { usePreferences } from '@vben/preferences';
+import { usePriorityValues } from '@kris/hooks';
+import { EmptyIcon } from '@kris/icons';
+import { $t } from '@kris/locales';
+import { usePreferences } from '@kris/preferences';
 import {
   cloneDeep,
   cn,
   isBoolean,
   isEqual,
   mergeWithArrayOverride,
-} from '@vben/utils';
+} from '@kris/utils';
 
-import { VbenHelpTooltip, VbenLoading } from '@vben-core/shadcn-ui';
+import { VbenHelpTooltip, VbenLoading } from '@kris-core/shadcn-ui';
 
 import { VxeButton } from 'vxe-pc-ui';
 import { VxeGrid, VxeUI } from 'vxe-table';

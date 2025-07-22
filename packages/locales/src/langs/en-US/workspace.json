@@ -1,0 +1,17 @@
+{
+  "greeting": "Good morning, {userName}, today is another day full of vitality!",
+  "weatherDesc": "Today is cloudy to clear, 20℃ - 25℃!",
+  "projectCount": "Project Count",
+  "todo": "Todo",
+  "message": "Message",
+  "quickNavigation": "Quick Navigation",
+  "home": "Home",
+  "dashboard": "Dashboard",
+  "subassembly": "Subassembly",
+  "systemManagement": "System Management",
+  "permissionManagement": "Permission management",
+  "chart": "Chart",
+  "toDos": "To-dos",
+  "securityCheck": "Security Check",
+  "securityCheckMessage": "Perform system security checks to ensure there are no security breaches or unauthorized access."
+}

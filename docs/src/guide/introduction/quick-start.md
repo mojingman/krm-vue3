@@ -32,7 +32,7 @@ git -v
 
 ```sh [GitHub]
 # clone 代码
-git clone https://github.com/vbenjs/vue-vben-admin.git
+git clone https://github.com/mojingman/krm-vue3.git
 ```
 
 ```sh [Gitee]
@@ -55,7 +55,7 @@ git clone https://gitee.com/annsion/vue-vben-admin.git
 
 ```bash
 # 进入项目目录
-cd vue-vben-admin
+cd krm-vue3
 
 # 使用项目指定的pnpm版本进行依赖安装
 npm i -g corepack
@@ -88,11 +88,11 @@ pnpm dev
 ```bash
 │
 ◆  Select the app you need to run [dev]:
-│  ○ @vben/web-antd
-│  ○ @vben/web-ele
-│  ○ @vben/web-naive
-│  ○ @vben/docs
-│  ● @vben/playground
+│  ○ @kris/web-antd
+│  ○ @kris/web-ele
+│  ○ @kris/web-naive
+│  ○ @kris/docs
+│  ● @kris/playground
 └
 ```
 

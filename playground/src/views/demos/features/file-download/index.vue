@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-import { Page } from '@vben/common-ui';
+import { Page } from '@kris/common-ui';
 import {
   downloadFileFromBase64,
   downloadFileFromBlobPart,
   downloadFileFromImageUrl,
   downloadFileFromUrl,
-} from '@vben/utils';
+} from '@kris/utils';
 
 import { Button, Card } from 'ant-design-vue';
 
@@ -52,8 +52,7 @@ function getResponse() {
         type="primary"
         @click="
           downloadFileFromImageUrl({
-            source:
-              'https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp',
+            source: 'https://mykris.sqlview.com.sg/KRIS/images/KRIS.png',
             fileName: 'vben-logo.png',
           })
         "

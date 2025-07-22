@@ -2,7 +2,7 @@ import type { PluginOption } from 'vite';
 
 import type { NitroMockPluginOptions } from '../typing';
 
-import { colors, consola, getPackage } from '@vben/node-utils';
+import { colors, consola, getPackage } from '@kris/node-utils';
 
 import getPort from 'get-port';
 import { build, createDevServer, createNitro, prepare } from 'nitropack';
@@ -10,7 +10,7 @@ import { build, createDevServer, createNitro, prepare } from 'nitropack';
 const hmrKeyRe = /^runtimeConfig\.|routeRules\./;
 
 export const viteNitroMockPlugin = ({
-  mockServerPackage = '@vben/backend-mock',
+  mockServerPackage = '@kris/backend-mock',
   port = 5320,
   verbose = true,
 }: NitroMockPluginOptions = {}): PluginOption => {
@@ -36,7 +36,7 @@ export const viteNitroMockPlugin = ({
         _printUrls();
 
         consola.log(
-          `  ${colors.green('➜')}  ${colors.bold('Nitro Mock Server')}: ${colors.cyan(`http://localhost:${port}/api`)}`,
+          `  ${colors.green('➜')}  ${colors.bold('KRIS Mock Server')}: ${colors.cyan(`http://localhost:${port}/api`)}`,
         );
       };
     },
@@ -91,7 +91,7 @@ async function runNitroServer(rootDir: string, port: number, verbose: boolean) {
 
     if (verbose) {
       console.log('');
-      consola.success(colors.bold(colors.green('Nitro Mock Server started.')));
+      consola.success(colors.bold(colors.green('KRIS Mock Server started.')));
     }
   };
   return await reload();

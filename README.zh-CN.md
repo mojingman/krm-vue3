@@ -1,13 +1,13 @@
 <div align="center">
-  <a href="https://github.com/anncwb/vue-vben-admin">
-    <img alt="VbenAdmin Logo" width="215" src="https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp">
+  <a href="https://github.com/mojingman/krm-vue3">
+    <img alt="KRIS Logo" width="215" src="https://mykris.sqlview.com.sg/KRIS/images/KRIS.png">
   </a>
   <br>
   <br>
 
 [![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
 
-  <h1>Vue Vben Admin</h1>
+  <h1>KRIS KRM</h1>
 </div>
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vbenjs_vue-vben-admin&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vbenjs_vue-vben-admin) ![codeql](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml/badge.svg) ![build](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml/badge.svg) ![ci](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml/badge.svg) ![deploy](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml/badge.svg)
@@ -16,7 +16,7 @@
 
 ## 简介
 
-Vue Vben Admin 是 Vue Vben Admin 的升级版本。作为一个免费开源的中后台模板，它采用了最新的 Vue 3、Vite、TypeScript 等主流技术开发，开箱即用，可用于中后台前端开发，也适合学习参考。
+KRIS KRM 是 KRIS KRM 的升级版本。作为一个免费开源的中后台模板，它采用了最新的 Vue 3、Vite、TypeScript 等主流技术开发，开箱即用，可用于中后台前端开发，也适合学习参考。
 
 ## 升级提示
 
@@ -30,17 +30,6 @@ Vue Vben Admin 是 Vue Vben Admin 的升级版本。作为一个免费开源的�
 - **国际化**：内置完善的国际化方案
 - **权限**：内置完善的动态路由权限生成方案
 
-## 预览
-
-- [Vben Admin](https://vben.pro/) - 完整版中文站点
-
-测试账号：vben/123456
-
-<div align="center">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview1.png">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview2.png">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview3.png">
-</div>
 
 ### 使用 Gitpod
 
@@ -57,13 +46,13 @@ Vue Vben Admin 是 Vue Vben Admin 的升级版本。作为一个免费开源的�
 1. 获取项目代码
 
 ```bash
-git clone https://github.com/vbenjs/vue-vben-admin.git
+git clone https://github.com/mojingman/krm-vue3.git
 ```
 
 2. 安装依赖
 
 ```bash
-cd vue-vben-admin
+cd krm-vue3
 npm i -g corepack
 pnpm install
 ```
@@ -80,13 +69,8 @@ pnpm dev
 pnpm build
 ```
 
-## 更新日志
 
-[CHANGELOG](https://github.com/vbenjs/vue-vben-admin/releases)
 
-## 如何贡献
-
-非常欢迎你的加入！[提一个 Issue](https://github.com/anncwb/vue-vben-admin/issues/new/choose) 或者提交一个 Pull Request。
 
 **Pull Request 流程：**
 
@@ -121,33 +105,3 @@ pnpm build
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
 | :-: | :-: | :-: | :-: |
 | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
-
-## 维护者
-
-[@Vben](https://github.com/anncwb)
-
-## Star 历史
-
-[![Star History Chart](https://api.star-history.com/svg?repos=vbenjs/vue-vben-admin&type=Date)](https://star-history.com/#vbenjs/vue-vben-admin&Date)
-
-## 捐赠
-
-如果你觉得这个项目对你有帮助，你可以帮作者买一杯咖啡表示支持！
-
-![donate](https://unpkg.com/@vbenjs/static-source@0.1.7/source/sponsor.png)
-
-<a style="display: block;width: 100px;height: 50px;line-height: 50px; color: #fff;text-align: center; background: #408aed;border-radius: 4px;" href="https://www.paypal.com/paypalme/cvvben">Paypal Me</a>
-
-## 贡献者
-
-<a href="https://github.com/vbenjs/vue-vben-admin/graphs/contributors">
-  <img alt="Contributors" src="https://opencollective.com/vbenjs/contributors.svg?button=false" />
-</a>
-
-## Discord
-
-- [Github Discussions](https://github.com/anncwb/vue-vben-admin/discussions)
-
-## 许可证
-
-[MIT © Vben-2020](./LICENSE)

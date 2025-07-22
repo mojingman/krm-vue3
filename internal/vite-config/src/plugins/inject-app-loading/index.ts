@@ -5,7 +5,7 @@ import fsp from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { readPackageJSON } from '@vben/node-utils';
+import { readPackageJSON } from '@kris/node-utils';
 
 /**
  * 用于生成将loading样式注入到项目中
@@ -57,7 +57,7 @@ async function getLoadingRawByHtmlTemplate(loadingTemplate: string) {
 
   if (!fs.existsSync(appLoadingPath)) {
     const __dirname = fileURLToPath(new URL('.', import.meta.url));
-    appLoadingPath = join(__dirname, './default-loading.html');
+    appLoadingPath = join(__dirname, './default-loading-antd.html');
   }
 
   return await fsp.readFile(appLoadingPath, 'utf8');

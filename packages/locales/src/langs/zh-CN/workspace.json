@@ -1,0 +1,17 @@
+{
+  "greeting": "早安，{userName}, 今天又是充满活力的一天!",
+  "weatherDesc": "今日多云转晴，20℃ - 25℃!",
+  "projectCount": "项目数",
+  "todo": "待办",
+  "message": "消息",
+  "quickNavigation": "快捷导航",
+  "home": "首页",
+  "dashboard": "仪表盘",
+  "subassembly": "组件",
+  "systemManagement": "系统管理",
+  "permissionManagement": "权限管理",
+  "chart": "图表",
+  "toDos": "待办事项",
+  "securityCheck": "安全检查",
+  "securityCheckMessage": "进行系统安全检查，确保没有安全漏洞或未授权的访问。"
+}

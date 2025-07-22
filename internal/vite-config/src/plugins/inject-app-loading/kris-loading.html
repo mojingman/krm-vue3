@@ -1,0 +1,73 @@
+<style data-app-loading="inject-css">
+  html {
+    line-height: 1.15;
+  }
+
+  .loading {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f4f7f9;
+    transition: all 0.8s ease-out;
+  }
+
+  .loading.hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .dark .loading {
+    background: #0d0d10;
+  }
+
+  /* 更好看的加载动画 */
+  .loader-ring {
+    width: 64px;
+    height: 64px;
+    border: 6px solid hsl(var(--primary, 210 100% 50%) / 0.2);
+    border-top: 6px solid hsl(var(--primary, 210 100% 50%));
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 10px hsl(var(--primary, 210 100% 50%) / 0.3);
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .title {
+    margin-top: 24px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000d9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .title {
+    color: #ffffffe6;
+  }
+
+  .subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 0.5px;
+  }
+
+  .dark .subtitle {
+    color: #aaa;
+  }
+</style>
+
+<div class="loading" id="__app-loading__">
+  <div class="loader-ring"></div>
+  <div class="title"><%= VITE_APP_TITLE %></div>
+  <div class="subtitle">Loading, please wait...</div>
+</div>

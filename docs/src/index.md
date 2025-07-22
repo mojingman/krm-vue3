@@ -4,12 +4,12 @@ layout: home
 sidebar: false
 
 hero:
-  name: Vben Admin
+  name: KRIS KRM
   text: 企业级管理系统框架
   tagline: 全新升级，开箱即用，简单高效
   image:
-    src: https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp
-    alt: Vben Admin
+    src: https://mykris.sqlview.com.sg/KRIS/images/KRIS.png
+    alt: KRIS KRM
   actions:
     - theme: brand
       text: 快速开始 ->
@@ -89,7 +89,7 @@ const members = [
     avatar: 'https://avatars.githubusercontent.com/u/28132598?v=4',
     name: 'Vben',
     title: '创建者',
-    desc: 'Vben Admin以及相关生态的作者，负责项目的整体开发。',
+    desc: 'KRIS KRM以及相关生态的作者，负责项目的整体开发。',
     links: [
       { icon: 'github', link: 'https://github.com/anncwb' },
     ]

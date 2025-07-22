@@ -1,4 +1,4 @@
-import type { LayoutType } from '@vben-core/typings';
+import type { LayoutType } from '@kris-core/typings';
 
 import type { VbenLayoutProps } from '../vben-layout';
 

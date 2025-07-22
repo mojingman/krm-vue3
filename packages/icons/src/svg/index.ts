@@ -1,4 +1,4 @@
-import { createIconifyIcon } from '@vben-core/icons';
+import { createIconifyIcon } from '@kris-core/icons';
 
 import './load.js';
 
@@ -11,6 +11,7 @@ const SvgCardIcon = createIconifyIcon('svg:card');
 const SvgBellIcon = createIconifyIcon('svg:bell');
 const SvgCakeIcon = createIconifyIcon('svg:cake');
 const SvgAntdvLogoIcon = createIconifyIcon('svg:antdv-logo');
+const SvgKRISLogoIcon = createIconifyIcon('svg:kris-logo');
 
 export {
   SvgAntdvLogoIcon,
@@ -22,4 +23,5 @@ export {
   SvgCakeIcon,
   SvgCardIcon,
   SvgDownloadIcon,
+  SvgKRISLogoIcon,
 };

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import type { VbenFormSchema } from '@vben/common-ui';
-import type { Recordable } from '@vben/types';
+import type { VbenFormSchema } from '@kris/common-ui';
+import type { Recordable } from '@kris/types';
 
 import { computed, ref } from 'vue';
 
-import { AuthenticationCodeLogin, z } from '@vben/common-ui';
-import { $t } from '@vben/locales';
+import { AuthenticationCodeLogin, z } from '@kris/common-ui';
+import { $t } from '@kris/locales';
 
 defineOptions({ name: 'CodeLogin' });
 

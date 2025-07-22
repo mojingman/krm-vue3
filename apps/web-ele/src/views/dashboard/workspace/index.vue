@@ -4,8 +4,8 @@ import type {
   WorkbenchQuickNavItem,
   WorkbenchTodoItem,
   WorkbenchTrendItem,
-} from '@vben/common-ui';
-
+} from '@kris/common-ui';
+import { $t } from '@kris/locales';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -16,10 +16,10 @@ import {
   WorkbenchQuickNav,
   WorkbenchTodo,
   WorkbenchTrends,
-} from '@vben/common-ui';
-import { preferences } from '@vben/preferences';
-import { useUserStore } from '@vben/stores';
-import { openWindow } from '@vben/utils';
+} from '@kris/common-ui';
+import { preferences } from '@kris/preferences';
+import { useUserStore } from '@kris/stores';
+import { openWindow } from '@kris/utils';
 
 import AnalyticsVisitsSource from '../analytics/analytics-visits-source.vue';
 
@@ -180,7 +180,7 @@ const trendItems: WorkbenchTrendItem[] = [
     avatar: 'svg:avatar-4',
     content: `发表文章 <a>如何编写一个Vite插件</a> `,
     date: '2天前',
-    title: 'Vben',
+    title: 'ChenKai',
   },
   {
     avatar: 'svg:avatar-1',
@@ -208,9 +208,9 @@ const trendItems: WorkbenchTrendItem[] = [
   },
   {
     avatar: 'svg:avatar-4',
-    content: `发表文章 <a>如何编写使用 Admin Vben</a> `,
+    content: `发表文章 <a>如何编写使用 Admin ChenKai</a> `,
     date: '2021-03-01 20:00',
-    title: 'Vben',
+    title: 'ChenKai',
   },
 ];
 
@@ -239,9 +239,11 @@ function navTo(nav: WorkbenchProjectItem | WorkbenchQuickNavItem) {
       :avatar="userStore.userInfo?.avatar || preferences.app.defaultAvatar"
     >
       <template #title>
-        早安, {{ userStore.userInfo?.realName }}, 开始您一天的工作吧！
+        {{
+          $t('workspace.greeting', { userName: userStore.userInfo?.realName })
+        }}
       </template>
-      <template #description> 今日晴，20℃ - 32℃！ </template>
+      <template #description> {{ $t('workspace.weatherDesc') }} </template>
     </WorkbenchHeader>
 
     <div class="mt-5 flex flex-col lg:flex-row">

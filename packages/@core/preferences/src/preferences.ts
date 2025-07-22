@@ -1,11 +1,11 @@
-import type { DeepPartial } from '@vben-core/typings';
+import type { DeepPartial } from '@kris-core/typings';
 
 import type { InitialOptions, Preferences } from './types';
 
 import { markRaw, reactive, readonly, watch } from 'vue';
 
-import { StorageManager } from '@vben-core/shared/cache';
-import { isMacOs, merge } from '@vben-core/shared/utils';
+import { StorageManager } from '@kris-core/shared/cache';
+import { isMacOs, merge } from '@kris-core/shared/utils';
 
 import {
   breakpointsTailwind,

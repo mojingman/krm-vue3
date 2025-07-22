@@ -7,8 +7,8 @@ import {
   VBEN_GITHUB_URL,
   VBEN_LOGO_URL,
   VBEN_NAIVE_PREVIEW_URL,
-} from '@vben/constants';
-import { SvgAntdvLogoIcon } from '@vben/icons';
+} from '@kris/constants';
+import { SvgAntdvLogoIcon } from '@kris/icons';
 
 import { IFrameView } from '#/layouts';
 import { $t } from '#/locales';
@@ -17,9 +17,9 @@ const routes: RouteRecordRaw[] = [
   {
     meta: {
       badgeType: 'dot',
-      icon: VBEN_LOGO_URL,
+      icon: 'eos-icons:project-outlined',
       order: 9998,
-      title: $t('demos.vben.title'),
+      title: $t('demos.kris.title'),
     },
     name: 'VbenProject',
     path: '/vben-admin',
@@ -31,7 +31,7 @@ const routes: RouteRecordRaw[] = [
         meta: {
           icon: 'lucide:book-open-text',
           link: VBEN_DOC_URL,
-          title: $t('demos.vben.document'),
+          title: $t('demos.kris.document'),
         },
       },
       {
@@ -52,7 +52,7 @@ const routes: RouteRecordRaw[] = [
           badgeType: 'dot',
           icon: SvgAntdvLogoIcon,
           link: VBEN_ANT_PREVIEW_URL,
-          title: $t('demos.vben.antdv'),
+          title: $t('demos.kris.antdv'),
         },
       },
       {
@@ -63,7 +63,7 @@ const routes: RouteRecordRaw[] = [
           badgeType: 'dot',
           icon: 'logos:naiveui',
           link: VBEN_NAIVE_PREVIEW_URL,
-          title: $t('demos.vben.naive-ui'),
+          title: $t('demos.kris.naive-ui'),
         },
       },
       {
@@ -74,7 +74,7 @@ const routes: RouteRecordRaw[] = [
           badgeType: 'dot',
           icon: 'logos:element',
           link: VBEN_ELE_PREVIEW_URL,
-          title: $t('demos.vben.element-plus'),
+          title: $t('demos.kris.element-plus'),
         },
       },
     ],
@@ -84,7 +84,7 @@ const routes: RouteRecordRaw[] = [
     meta: {
       icon: 'lucide:copyright',
       order: 9999,
-      title: $t('demos.vben.about'),
+      title: $t('demos.kris.about'),
     },
     name: 'VbenAbout',
     path: '/vben-admin/about',

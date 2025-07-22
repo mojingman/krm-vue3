@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Recordable } from '@vben/types';
+import type { Recordable } from '@kris/types';
 
 import { reactive, ref } from 'vue';
 
@@ -8,8 +8,8 @@ import {
   VbenButton,
   VbenButtonGroup,
   VbenCheckButtonGroup,
-} from '@vben/common-ui';
-import { LoaderCircle, Square, SquareCheckBig } from '@vben/icons';
+} from '@kris/common-ui';
+import { LoaderCircle, Square, SquareCheckBig } from '@kris/icons';
 
 import { Button, Card, message } from 'ant-design-vue';
 

@@ -1,22 +1,22 @@
 <script lang="ts" setup>
 import type { SetupContext } from 'vue';
 
-import type { MenuRecordRaw } from '@vben/types';
+import type { MenuRecordRaw } from '@kris/types';
 
 import { computed, useSlots, watch } from 'vue';
 
-import { useRefresh } from '@vben/hooks';
-import { $t, i18n } from '@vben/locales';
+import { useRefresh } from '@kris/hooks';
+import { $t, i18n } from '@kris/locales';
 import {
   preferences,
   updatePreferences,
   usePreferences,
-} from '@vben/preferences';
-import { useAccessStore } from '@vben/stores';
-import { cloneDeep, mapTree } from '@vben/utils';
+} from '@kris/preferences';
+import { useAccessStore } from '@kris/stores';
+import { cloneDeep, mapTree } from '@kris/utils';
 
-import { VbenAdminLayout } from '@vben-core/layout-ui';
-import { VbenBackTop, VbenLogo } from '@vben-core/shadcn-ui';
+import { VbenAdminLayout } from '@kris-core/layout-ui';
+import { VbenBackTop, VbenLogo } from '@kris-core/shadcn-ui';
 
 import { Breadcrumb, CheckUpdates, Preferences } from '../widgets';
 import { LayoutContent, LayoutContentSpinner } from './content';
@@ -253,6 +253,7 @@ const headerSlots = computed(() => {
         :theme="theme"
         @clear-preferences-and-logout="clearPreferencesAndLogout"
       >
+        <!-- 面包屑 -->
         <template
           v-if="!showHeaderNav && preferences.breadcrumb.enable"
           #breadcrumb

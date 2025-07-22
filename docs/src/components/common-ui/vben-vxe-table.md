@@ -29,7 +29,7 @@ outline: deep
 ```ts
 import { h } from 'vue';
 
-import { setupVbenVxeTable, useVbenVxeGrid } from '@vben/plugins/vxe-table';
+import { setupVbenVxeTable, useVbenVxeGrid } from '@kris/plugins/vxe-table';
 
 import { Button, Image } from 'ant-design-vue';
 
@@ -93,7 +93,7 @@ setupVbenVxeTable({
 
 export { useVbenVxeGrid };
 
-export type * from '@vben/plugins/vxe-table';
+export type * from '@kris/plugins/vxe-table';
 ```
 
 :::

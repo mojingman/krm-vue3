@@ -28,12 +28,12 @@ outline: deep
 import type {
   VbenFormSchema as FormSchema,
   VbenFormProps,
-} from '@vben/common-ui';
+} from '@kris/common-ui';
 
 import type { ComponentType } from './component';
 
-import { setupVbenForm, useVbenForm as useForm, z } from '@vben/common-ui';
-import { $t } from '@vben/locales';
+import { setupVbenForm, useVbenForm as useForm, z } from '@kris/common-ui';
+import { $t } from '@kris/locales';
 
 setupVbenForm<ComponentType>({
   config: {
@@ -82,13 +82,13 @@ export type { VbenFormProps };
  * 可用于 vben-form、vben-modal、vben-drawer 等组件使用,
  */
 
-import type { BaseFormComponentType } from '@vben/common-ui';
+import type { BaseFormComponentType } from '@kris/common-ui';
 
 import type { Component, SetupContext } from 'vue';
 import { h } from 'vue';
 
-import { globalShareState, IconPicker } from '@vben/common-ui';
-import { $t } from '@vben/locales';
+import { globalShareState, IconPicker } from '@kris/common-ui';
+import { $t } from '@kris/locales';
 
 import {
   AutoComplete,

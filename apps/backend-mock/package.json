@@ -1,10 +1,14 @@
 {
-  "name": "@vben/backend-mock",
+  "name": "@kris/backend-mock",
   "version": "0.0.1",
   "description": "",
   "private": true,
   "license": "MIT",
-  "author": "",
+  "author": {
+    "name": "chenkai",
+    "email": "chenkai@sqlview.cn",
+    "url": "https://github.com/mojingman"
+  },
   "scripts": {
     "build": "nitro build",
     "start": "nitro dev"

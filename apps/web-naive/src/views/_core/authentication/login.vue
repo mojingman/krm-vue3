@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import type { VbenFormSchema } from '@vben/common-ui';
-import type { BasicOption } from '@vben/types';
+import type { VbenFormSchema } from '@kris/common-ui';
+import type { BasicOption } from '@kris/types';
 
 import { computed, markRaw } from 'vue';
 
-import { AuthenticationLogin, SliderCaptcha, z } from '@vben/common-ui';
-import { $t } from '@vben/locales';
+import { AuthenticationLogin, SliderCaptcha, z } from '@kris/common-ui';
+import { $t } from '@kris/locales';
 
 import { useAuthStore } from '#/store';
 
@@ -16,7 +16,7 @@ const authStore = useAuthStore();
 const MOCK_USER_OPTIONS: BasicOption[] = [
   {
     label: 'Super',
-    value: 'vben',
+    value: 'chenkai',
   },
   {
     label: 'Admin',

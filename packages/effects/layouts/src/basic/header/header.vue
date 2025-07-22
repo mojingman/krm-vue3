@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { computed, useSlots } from 'vue';
 
-import { useRefresh } from '@vben/hooks';
-import { RotateCw } from '@vben/icons';
-import { preferences, usePreferences } from '@vben/preferences';
-import { useAccessStore } from '@vben/stores';
+import { useRefresh } from '@kris/hooks';
+import { RotateCw } from '@kris/icons';
+import { preferences, usePreferences } from '@kris/preferences';
+import { useAccessStore } from '@kris/stores';
 
-import { VbenFullScreen, VbenIconButton } from '@vben-core/shadcn-ui';
+import { VbenFullScreen, VbenIconButton } from '@kris-core/shadcn-ui';
 
 import {
   GlobalSearch,
@@ -39,6 +39,7 @@ const { globalSearchShortcutKey, preferencesButtonPosition } = usePreferences();
 const slots = useSlots();
 const { refresh } = useRefresh();
 
+// Header 右侧功能菜单
 const rightSlots = computed(() => {
   const list = [{ index: REFERENCE_VALUE + 100, name: 'user-dropdown' }];
   if (preferences.widget.globalSearch) {
@@ -125,6 +126,7 @@ function clearPreferencesAndLogout() {
       </template>
     </slot>
   </template>
+  <!-- 面包屑 -->
   <div class="flex-center hidden lg:block">
     <slot name="breadcrumb"></slot>
   </div>

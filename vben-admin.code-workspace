@@ -1,171 +1,171 @@
 {
   "folders": [
     {
-      "name": "@vben/backend-mock",
+      "name": "@kris/backend-mock",
       "path": "apps/backend-mock",
     },
     {
-      "name": "@vben/web-antd",
+      "name": "@kris/web-antd",
       "path": "apps/web-antd",
     },
     {
-      "name": "@vben/web-ele",
+      "name": "@kris/web-ele",
       "path": "apps/web-ele",
     },
     {
-      "name": "@vben/web-naive",
+      "name": "@kris/web-naive",
       "path": "apps/web-naive",
     },
     {
-      "name": "@vben/docs",
+      "name": "@kris/docs",
       "path": "docs",
     },
     {
-      "name": "@vben/commitlint-config",
+      "name": "@kris/commitlint-config",
       "path": "internal/lint-configs/commitlint-config",
     },
     {
-      "name": "@vben/eslint-config",
+      "name": "@kris/eslint-config",
       "path": "internal/lint-configs/eslint-config",
     },
     {
-      "name": "@vben/prettier-config",
+      "name": "@kris/prettier-config",
       "path": "internal/lint-configs/prettier-config",
     },
     {
-      "name": "@vben/stylelint-config",
+      "name": "@kris/stylelint-config",
       "path": "internal/lint-configs/stylelint-config",
     },
     {
-      "name": "@vben/node-utils",
+      "name": "@kris/node-utils",
       "path": "internal/node-utils",
     },
     {
-      "name": "@vben/tailwind-config",
+      "name": "@kris/tailwind-config",
       "path": "internal/tailwind-config",
     },
     {
-      "name": "@vben/tsconfig",
+      "name": "@kris/tsconfig",
       "path": "internal/tsconfig",
     },
     {
-      "name": "@vben/vite-config",
+      "name": "@kris/vite-config",
       "path": "internal/vite-config",
     },
     {
-      "name": "@vben-core/design",
+      "name": "@kris-core/design",
       "path": "packages/@core/base/design",
     },
     {
-      "name": "@vben-core/icons",
+      "name": "@kris-core/icons",
       "path": "packages/@core/base/icons",
     },
     {
-      "name": "@vben-core/shared",
+      "name": "@kris-core/shared",
       "path": "packages/@core/base/shared",
     },
     {
-      "name": "@vben-core/typings",
+      "name": "@kris-core/typings",
       "path": "packages/@core/base/typings",
     },
     {
-      "name": "@vben-core/composables",
+      "name": "@kris-core/composables",
       "path": "packages/@core/composables",
     },
     {
-      "name": "@vben-core/preferences",
+      "name": "@kris-core/preferences",
       "path": "packages/@core/preferences",
     },
     {
-      "name": "@vben-core/form-ui",
+      "name": "@kris-core/form-ui",
       "path": "packages/@core/ui-kit/form-ui",
     },
     {
-      "name": "@vben-core/layout-ui",
+      "name": "@kris-core/layout-ui",
       "path": "packages/@core/ui-kit/layout-ui",
     },
     {
-      "name": "@vben-core/menu-ui",
+      "name": "@kris-core/menu-ui",
       "path": "packages/@core/ui-kit/menu-ui",
     },
     {
-      "name": "@vben-core/popup-ui",
+      "name": "@kris-core/popup-ui",
       "path": "packages/@core/ui-kit/popup-ui",
     },
     {
-      "name": "@vben-core/shadcn-ui",
+      "name": "@kris-core/shadcn-ui",
       "path": "packages/@core/ui-kit/shadcn-ui",
     },
     {
-      "name": "@vben-core/tabs-ui",
+      "name": "@kris-core/tabs-ui",
       "path": "packages/@core/ui-kit/tabs-ui",
     },
     {
-      "name": "@vben/constants",
+      "name": "@kris/constants",
       "path": "packages/constants",
     },
     {
-      "name": "@vben/access",
+      "name": "@kris/access",
       "path": "packages/effects/access",
     },
     {
-      "name": "@vben/common-ui",
+      "name": "@kris/common-ui",
       "path": "packages/effects/common-ui",
     },
     {
-      "name": "@vben/hooks",
+      "name": "@kris/hooks",
       "path": "packages/effects/hooks",
     },
     {
-      "name": "@vben/layouts",
+      "name": "@kris/layouts",
       "path": "packages/effects/layouts",
     },
     {
-      "name": "@vben/plugins",
+      "name": "@kris/plugins",
       "path": "packages/effects/plugins",
     },
     {
-      "name": "@vben/request",
+      "name": "@kris/request",
       "path": "packages/effects/request",
     },
     {
-      "name": "@vben/icons",
+      "name": "@kris/icons",
       "path": "packages/icons",
     },
     {
-      "name": "@vben/locales",
+      "name": "@kris/locales",
       "path": "packages/locales",
     },
     {
-      "name": "@vben/preferences",
+      "name": "@kris/preferences",
       "path": "packages/preferences",
     },
     {
-      "name": "@vben/stores",
+      "name": "@kris/stores",
       "path": "packages/stores",
     },
     {
-      "name": "@vben/styles",
+      "name": "@kris/styles",
       "path": "packages/styles",
     },
     {
-      "name": "@vben/types",
+      "name": "@kris/types",
       "path": "packages/types",
     },
     {
-      "name": "@vben/utils",
+      "name": "@kris/utils",
       "path": "packages/utils",
     },
     {
-      "name": "@vben/playground",
+      "name": "@kris/playground",
       "path": "playground",
     },
     {
-      "name": "@vben/turbo-run",
+      "name": "@kris/turbo-run",
       "path": "scripts/turbo-run",
     },
     {
-      "name": "@vben/vsh",
+      "name": "@kris/vsh",
       "path": "scripts/vsh",
     },
   ],

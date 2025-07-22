@@ -5,7 +5,7 @@ import { defineConfig } from 'vitepress';
 import { version } from '../../../package.json';
 
 export const en = defineConfig({
-  description: 'Vben Admin & Enterprise level management system framework',
+  description: 'KRIS KRM & Enterprise level management system framework',
   lang: 'en-US',
   themeConfig: {
     darkModeSwitchLabel: 'Theme',
@@ -55,7 +55,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
       items: [
         {
           link: 'introduction/vben',
-          text: 'About Vben Admin',
+          text: 'About KRIS KRM',
         },
         {
           link: 'introduction/why',
@@ -163,7 +163,7 @@ function nav(): DefaultTheme.NavItem[] {
       text: 'Demo',
       items: [
         {
-          text: 'Vben Admin',
+          text: 'KRIS KRM',
           items: [
             {
               link: 'https://www.vben.pro',
@@ -188,7 +188,7 @@ function nav(): DefaultTheme.NavItem[] {
           items: [
             {
               link: 'https://vben.vvbin.cn',
-              text: 'Vben Admin 2.x',
+              text: 'KRIS KRM 2.x',
             },
           ],
         },

@@ -1,54 +1,58 @@
 <script lang="ts" setup>
-import type { NotificationItem } from '@vben/layouts';
+import type { NotificationItem } from '@kris/layouts';
 
 import { computed, ref, watch } from 'vue';
 
-import { AuthenticationLoginExpiredModal } from '@vben/common-ui';
-import { VBEN_DOC_URL, VBEN_GITHUB_URL } from '@vben/constants';
-import { useWatermark } from '@vben/hooks';
-import { BookOpenText, CircleHelp, MdiGithub } from '@vben/icons';
+import { AuthenticationLoginExpiredModal } from '@kris/common-ui';
+// import { VBEN_DOC_URL, VBEN_GITHUB_URL } from '@kris/constants';
+import { useWatermark } from '@kris/hooks';
+// import { BookOpenText, CircleHelp, MdiGithub } from '@kris/icons';
 import {
   BasicLayout,
   LockScreen,
   Notification,
   UserDropdown,
-} from '@vben/layouts';
-import { preferences } from '@vben/preferences';
-import { useAccessStore, useUserStore } from '@vben/stores';
-import { openWindow } from '@vben/utils';
+} from '@kris/layouts';
+import { preferences } from '@kris/preferences';
+import { useAccessStore, useUserStore } from '@kris/stores';
+// import { openWindow } from '@kris/utils';
 
-import { $t } from '#/locales';
+// import { $t } from '#/locales';
 import { useAuthStore } from '#/store';
 import LoginForm from '#/views/_core/authentication/login.vue';
 
 const notifications = ref<NotificationItem[]>([
   {
-    avatar: 'https://avatar.vercel.sh/vercel.svg?text=VB',
-    date: '3小时前',
+    avatar:
+      'https://sqlview.com.sg/wp-content/uploads/Paperless-Office-Software-Client-Scoot.png',
+    date: '3 hours ago',
     isRead: true,
-    message: '描述信息描述信息描述信息',
-    title: '收到了 14 份新周报',
+    message: 'notification describes the information',
+    title: '14 new requests were received.',
   },
   {
-    avatar: 'https://avatar.vercel.sh/1',
-    date: '刚刚',
+    avatar:
+      'https://sqlview.com.sg/wp-content/uploads/Paperless-Office-Software-Client-National-Trades-Union-Congress-NTUC.png',
+    date: 'Just',
     isRead: false,
-    message: '描述信息描述信息描述信息',
-    title: '朱偏右 回复了你',
+    message: 'notification describes the information',
+    title: 'NTUC responded to you',
   },
   {
-    avatar: 'https://avatar.vercel.sh/1',
+    avatar:
+      'https://sqlview.com.sg/wp-content/uploads/Paperless-Office-Software-Client-JTC-Corporation.png',
     date: '2024-01-01',
     isRead: false,
-    message: '描述信息描述信息描述信息',
-    title: '曲丽丽 评论了你',
+    message: 'notification describes the information',
+    title: 'JTC responded to you',
   },
   {
-    avatar: 'https://avatar.vercel.sh/satori',
-    date: '1天前',
+    avatar:
+      'https://sqlview.com.sg/wp-content/uploads/Paperless-Office-Software-Client-Ministry-of-Education-MOE.png',
+    date: 'One day ago',
     isRead: false,
-    message: '描述信息描述信息描述信息',
-    title: '代办提醒',
+    message: 'notification describes the information',
+    title: 'Agency reminder', // 代办提醒
   },
 ]);
 
@@ -60,8 +64,9 @@ const showDot = computed(() =>
   notifications.value.some((item) => !item.isRead),
 );
 
+// 头像下拉菜单的item Demo环境不需要
 const menus = computed(() => [
-  {
+  /* {
     handler: () => {
       openWindow(VBEN_DOC_URL, {
         target: '_blank',
@@ -87,7 +92,7 @@ const menus = computed(() => [
     },
     icon: CircleHelp,
     text: $t('ui.widgets.qa'),
-  },
+  },*/
 ]);
 
 const avatar = computed(() => {
@@ -129,7 +134,7 @@ watch(
         :avatar
         :menus
         :text="userStore.userInfo?.realName"
-        description="ann.vben@gmail.com"
+        description="chenkai@sqlview.cn"
         tag-text="Pro"
         @logout="handleLogout"
       />
