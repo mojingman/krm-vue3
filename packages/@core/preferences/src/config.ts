@@ -37,12 +37,12 @@ const defaultPreferences: Preferences = {
   },
   login: {
     /* ChenKai add 21:58 2025.7.18 */
-    showCodeLogin: false,
+    showCodeLogin: true,
     showForgetPassword: true,
-    showQrcodeLogin: false,
-    showRegister: false,
+    showQrcodeLogin: true,
+    showRegister: true,
     showRememberMe: true,
-    showThirdPartyLogin: false,
+    showThirdPartyLogin: true,
     submitButtonText: '',
     subTitle: '',
     title: '',

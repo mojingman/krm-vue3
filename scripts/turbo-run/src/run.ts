@@ -23,19 +23,41 @@ export async function run(options: RunOptions) {
     return (pkg?.packageJson as Record<string, any>)?.scripts?.[command];
   });
 
+  const comboOptions = [
+    {
+      label: '🚀 Start All Dev Apps',
+      value: '__combo_all__',
+    },
+  ];
+
+  const selectOptions = [
+    ...selectPkgs.map((item) => ({
+      label: item?.packageJson.name,
+      value: item?.packageJson.name,
+    })),
+    ...comboOptions,
+  ];
+
   let selectPkg: string | symbol;
-  if (selectPkgs.length > 1) {
+
+  if (selectOptions.length > 1) {
     selectPkg = await select<string>({
       message: `Select the app you need to run [${command}]:`,
-      options: selectPkgs.map((item) => ({
-        label: item?.packageJson.name,
-        value: item?.packageJson.name,
-      })),
+      options: selectOptions,
     });
 
     if (isCancel(selectPkg) || !selectPkg) {
       cancel('👋 Has cancelled');
       process.exit(0);
+    }
+    if (selectPkg === '__combo_all__') {
+      await Promise.all([
+        execaCommand('pnpm -F @kris/playground run dev', { stdio: 'inherit' }), // 5555
+        execaCommand('pnpm -F @kris/web-antd run dev', { stdio: 'inherit' }), // 5666
+        execaCommand('pnpm -F @kris/web-ele run dev', { stdio: 'inherit' }), // 5777
+        execaCommand('pnpm -F @kris/web-naive run dev', { stdio: 'inherit' }), // 5888
+      ]);
+      return;
     }
   } else {
     selectPkg = selectPkgs[0]?.packageJson?.name ?? '';
