@@ -5,6 +5,7 @@ import {
   VBEN_ELE_PREVIEW_URL,
   VBEN_GITHUB_URL,
   VBEN_NAIVE_PREVIEW_URL,
+  VBEN_PREVIEW_URL,
 } from '@kris/constants';
 
 import { IFrameView } from '#/layouts';
@@ -23,7 +24,7 @@ const routes: RouteRecordRaw[] = [
     children: [
       {
         name: 'VbenDocument',
-        path: '/vben-admin/document',
+        path: '/kris/document',
         component: IFrameView,
         meta: {
           icon: 'lucide:book-open-text',
@@ -33,7 +34,7 @@ const routes: RouteRecordRaw[] = [
       },
       {
         name: 'VbenGithub',
-        path: '/vben-admin/github',
+        path: '/kris/github',
         component: IFrameView,
         meta: {
           icon: 'mdi:github',
@@ -42,8 +43,19 @@ const routes: RouteRecordRaw[] = [
         },
       },
       {
+        name: 'Full version',
+        path: '/kris/naive',
+        component: IFrameView,
+        meta: {
+          badgeType: 'dot',
+          icon: 'logos:vuetifyjs',
+          link: VBEN_PREVIEW_URL,
+          title: $t('demos.kris.full-version'),
+        },
+      },
+      {
         name: 'VbenNaive',
-        path: '/vben-admin/naive',
+        path: '/kris/naive',
         component: IFrameView,
         meta: {
           badgeType: 'dot',
@@ -54,7 +66,7 @@ const routes: RouteRecordRaw[] = [
       },
       {
         name: 'VbenElementPlus',
-        path: '/vben-admin/ele',
+        path: '/kris/ele',
         component: IFrameView,
         meta: {
           badgeType: 'dot',
@@ -67,7 +79,7 @@ const routes: RouteRecordRaw[] = [
   },
   {
     name: 'VbenAbout',
-    path: '/vben-admin/about',
+    path: '/kris/about',
     component: () => import('#/views/_core/about/index.vue'),
     meta: {
       icon: 'lucide:copyright',

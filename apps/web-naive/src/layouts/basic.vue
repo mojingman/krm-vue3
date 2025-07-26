@@ -23,32 +23,36 @@ import LoginForm from '#/views/_core/authentication/login.vue';
 
 const notifications = ref<NotificationItem[]>([
   {
-    avatar: 'https://avatar.vercel.sh/vercel.svg?text=VB',
-    date: '3小时前',
+    avatar:
+      'https://sqlview.com.sg/wp-content/uploads/Paperless-Office-Software-Client-Scoot.png',
+    date: '3 hours ago',
     isRead: true,
-    message: '描述信息描述信息描述信息',
-    title: '收到了 14 份新周报',
+    message: 'notification describes the information',
+    title: '14 new requests were received.',
   },
   {
-    avatar: 'https://avatar.vercel.sh/1',
-    date: '刚刚',
+    avatar:
+      'https://sqlview.com.sg/wp-content/uploads/Paperless-Office-Software-Client-National-Trades-Union-Congress-NTUC.png',
+    date: 'Just',
     isRead: false,
-    message: '描述信息描述信息描述信息',
-    title: '朱偏右 回复了你',
+    message: 'notification describes the information',
+    title: 'NTUC responded to you',
   },
   {
-    avatar: 'https://avatar.vercel.sh/1',
+    avatar:
+      'https://sqlview.com.sg/wp-content/uploads/Paperless-Office-Software-Client-JTC-Corporation.png',
     date: '2024-01-01',
     isRead: false,
-    message: '描述信息描述信息描述信息',
-    title: '曲丽丽 评论了你',
+    message: 'notification describes the information',
+    title: 'JTC responded to you',
   },
   {
-    avatar: 'https://avatar.vercel.sh/satori',
-    date: '1天前',
+    avatar:
+      'https://sqlview.com.sg/wp-content/uploads/Paperless-Office-Software-Client-Ministry-of-Education-MOE.png',
+    date: 'One day ago',
     isRead: false,
-    message: '描述信息描述信息描述信息',
-    title: '代办提醒',
+    message: 'notification describes the information',
+    title: 'Agency reminder', // 代办提醒
   },
 ]);
 

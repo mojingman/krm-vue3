@@ -15,6 +15,7 @@ const routes: RouteRecordRaw[] = [
     children: [
       {
         meta: {
+          icon: 'logos:naiveui',
           title: $t('demos.naive'),
         },
         name: 'NaiveDemos',
@@ -23,6 +24,7 @@ const routes: RouteRecordRaw[] = [
       },
       {
         meta: {
+          icon: 'logos:airtable',
           title: $t('demos.table'),
         },
         name: 'Table',
@@ -31,6 +33,7 @@ const routes: RouteRecordRaw[] = [
       },
       {
         meta: {
+          icon: 'logos:webplatform',
           title: $t('demos.form'),
         },
         name: 'Form',

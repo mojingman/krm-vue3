@@ -15,6 +15,7 @@ const routes: RouteRecordRaw[] = [
     children: [
       {
         meta: {
+          icon: 'logos:element',
           title: $t('demos.elementPlus'),
         },
         name: 'NaiveDemos',
@@ -23,6 +24,7 @@ const routes: RouteRecordRaw[] = [
       },
       {
         meta: {
+          icon: 'logos:webplatform',
           title: $t('demos.form'),
         },
         name: 'BasicForm',

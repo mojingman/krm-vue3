@@ -5,7 +5,7 @@ import {
   VBEN_DOC_URL,
   VBEN_ELE_PREVIEW_URL,
   VBEN_GITHUB_URL,
-  VBEN_LOGO_URL,
+  VBEN_PREVIEW_URL,
 } from '@kris/constants';
 import { SvgAntdvLogoIcon } from '@kris/icons';
 
@@ -21,11 +21,11 @@ const routes: RouteRecordRaw[] = [
       title: $t('demos.kris.title'),
     },
     name: 'VbenProject',
-    path: '/vben-admin',
+    path: '/kris',
     children: [
       {
         name: 'VbenDocument',
-        path: '/vben-admin/document',
+        path: '/kris/document',
         component: IFrameView,
         meta: {
           icon: 'lucide:book-open-text',
@@ -35,7 +35,7 @@ const routes: RouteRecordRaw[] = [
       },
       {
         name: 'VbenGithub',
-        path: '/vben-admin/github',
+        path: '/kris/github',
         component: IFrameView,
         meta: {
           icon: 'mdi:github',
@@ -44,8 +44,19 @@ const routes: RouteRecordRaw[] = [
         },
       },
       {
+        name: 'Full version',
+        path: '/kris/naive',
+        component: IFrameView,
+        meta: {
+          badgeType: 'dot',
+          icon: 'logos:vuetifyjs',
+          link: VBEN_PREVIEW_URL,
+          title: $t('demos.kris.full-version'),
+        },
+      },
+      {
         name: 'VbenAntd',
-        path: '/vben-admin/antd',
+        path: '/kris/antd',
         component: IFrameView,
         meta: {
           badgeType: 'dot',
