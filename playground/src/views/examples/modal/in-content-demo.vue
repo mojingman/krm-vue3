@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-import { useVbenModal } from '@kris/common-ui';
+import { useKrisModal } from '@kris/common-ui';
 
 import { Input, message } from 'ant-design-vue';
 
-const [Modal, modalApi] = useVbenModal({
+const [Modal, modalApi] = useKrisModal({
   destroyOnClose: false,
   onCancel() {
     modalApi.close();

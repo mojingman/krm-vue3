@@ -1,15 +1,15 @@
 import type {
-  VbenFormSchema as FormSchema,
-  VbenFormProps,
+  KrisFormSchema as FormSchema,
+  KrisFormProps,
 } from '@kris/common-ui';
 
 import type { ComponentType } from './component';
 
-import { setupVbenForm, useVbenForm as useForm, z } from '@kris/common-ui';
+import { setupKrisForm, useKrisForm as useForm, z } from '@kris/common-ui';
 import { $t } from '@kris/locales';
 
-async function initSetupVbenForm() {
-  setupVbenForm<ComponentType>({
+async function initSetupKrisForm() {
+  setupKrisForm<ComponentType>({
     config: {
       // ant design vue组件库默认都是 v-model:value
       baseModelPropName: 'value',
@@ -40,8 +40,8 @@ async function initSetupVbenForm() {
   });
 }
 
-const useVbenForm = useForm<ComponentType>;
+const useKrisForm = useForm<ComponentType>;
 
-export { initSetupVbenForm, useVbenForm, z };
-export type VbenFormSchema = FormSchema<ComponentType>;
-export type { VbenFormProps };
+export { initSetupKrisForm, useKrisForm, z };
+export type KrisFormSchema = FormSchema<ComponentType>;
+export type { KrisFormProps };

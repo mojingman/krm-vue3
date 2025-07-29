@@ -1,1 +1,1 @@
-export { default as VbenIcon } from './icon.vue';
+export { default as KrisIcon } from './icon.vue';

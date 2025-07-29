@@ -2,7 +2,7 @@
 import { MdiGithub, MdiGoogle, MdiQqchat, MdiWechat } from '@kris/icons';
 import { $t } from '@kris/locales';
 
-import { VbenIconButton } from '@kris-core/shadcn-ui';
+import { KrisIconButton } from '@kris-core/shadcn-ui';
 
 defineOptions({
   name: 'ThirdPartyLogin',
@@ -20,18 +20,18 @@ defineOptions({
     </div>
 
     <div class="mt-4 flex flex-wrap justify-center">
-      <VbenIconButton class="mb-3">
+      <KrisIconButton class="mb-3">
         <MdiWechat />
-      </VbenIconButton>
-      <VbenIconButton class="mb-3">
+      </KrisIconButton>
+      <KrisIconButton class="mb-3">
         <MdiQqchat />
-      </VbenIconButton>
-      <VbenIconButton class="mb-3">
+      </KrisIconButton>
+      <KrisIconButton class="mb-3">
         <MdiGithub />
-      </VbenIconButton>
-      <VbenIconButton class="mb-3">
+      </KrisIconButton>
+      <KrisIconButton class="mb-3">
         <MdiGoogle />
-      </VbenIconButton>
+      </KrisIconButton>
     </div>
   </div>
 </template>

@@ -1,12 +1,12 @@
-export { setupVbenForm } from './config';
+export { setupKrisForm } from './config';
 
 export type {
   BaseFormComponentType,
   ExtendedFormApi,
-  VbenFormProps,
-  FormSchema as VbenFormSchema,
+  KrisFormProps,
+  FormSchema as KrisFormSchema,
 } from './types';
 
-export * from './use-vben-form';
-// export { default as VbenForm } from './vben-form.vue';
+export * from './use-kris-form';
+// export { default as KrisForm } from './kris-form.vue';
 export * as z from 'zod';

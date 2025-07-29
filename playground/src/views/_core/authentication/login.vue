@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { VbenFormSchema } from '@kris/common-ui';
+import type { KrisFormSchema } from '@kris/common-ui';
 import type { BasicOption, Recordable } from '@kris/types';
 
 import { computed, markRaw, useTemplateRef } from 'vue';
@@ -29,10 +29,10 @@ const MOCK_USER_OPTIONS: BasicOption[] = [
   },
 ];
 
-const formSchema = computed((): VbenFormSchema[] => {
+const formSchema = computed((): KrisFormSchema[] => {
   return [
     /* {
-      component: 'VbenSelect',
+      component: 'KrisSelect',
       // componentProps(_values, form) {
       //   return {
       //     'onUpdate:modelValue': (value: string) => {
@@ -60,10 +60,10 @@ const formSchema = computed((): VbenFormSchema[] => {
         .string()
         .min(1, { message: $t('authentication.selectAccount') })
         .optional()
-        .default('vben'),
+        .default('kris'),
     },*/
     {
-      component: 'VbenInput',
+      component: 'KrisInput',
       componentProps: {
         placeholder: $t('authentication.usernameTip'),
       },
@@ -88,7 +88,7 @@ const formSchema = computed((): VbenFormSchema[] => {
       rules: z.string().min(1, { message: $t('authentication.usernameTip') }),
     },
     {
-      component: 'VbenInputPassword',
+      component: 'KrisInputPassword',
       componentProps: {
         placeholder: $t('authentication.password'),
       },

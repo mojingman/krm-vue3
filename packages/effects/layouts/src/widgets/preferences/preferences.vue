@@ -6,12 +6,12 @@ import { $t, loadLocaleMessages } from '@kris/locales';
 import { preferences, updatePreferences } from '@kris/preferences';
 import { capitalizeFirstLetter } from '@kris/utils';
 
-import { useVbenDrawer } from '@kris-core/popup-ui';
-import { VbenButton } from '@kris-core/shadcn-ui';
+import { useKrisDrawer } from '@kris-core/popup-ui';
+import { KrisButton } from '@kris-core/shadcn-ui';
 
 import PreferencesDrawer from './preferences-drawer.vue';
 
-const [Drawer, drawerApi] = useVbenDrawer({
+const [Drawer, drawerApi] = useKrisDrawer({
   connectedComponent: PreferencesDrawer,
 });
 
@@ -60,12 +60,12 @@ const listen = computed(() => {
 
     <div @click="() => drawerApi.open()">
       <slot>
-        <VbenButton
+        <KrisButton
           :title="$t('preferences.title')"
           class="bg-primary flex-col-center size-10 cursor-pointer rounded-l-lg rounded-r-none border-none"
         >
           <Settings class="size-5" />
-        </VbenButton>
+        </KrisButton>
       </slot>
     </div>
   </div>

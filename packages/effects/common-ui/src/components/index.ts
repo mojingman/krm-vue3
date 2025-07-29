@@ -14,20 +14,20 @@ export * from '@kris-core/popup-ui';
 
 // 给文档用
 export {
-  VbenAvatar,
-  VbenButton,
-  VbenButtonGroup,
-  VbenCheckbox,
-  VbenCheckButtonGroup,
-  VbenCountToAnimator,
-  VbenFullScreen,
-  VbenInputPassword,
-  VbenLoading,
-  VbenLogo,
-  VbenPinInput,
-  VbenSelect,
-  VbenSpinner,
-  VbenTree,
+  KrisAvatar,
+  KrisButton,
+  KrisButtonGroup,
+  KrisCheckbox,
+  KrisCheckButtonGroup,
+  KrisCountToAnimatortar,
+  KrisFullScreen,
+  KrisInputPassword,
+  KrisLoading,
+  KrisLogo,
+  KrisPinInput,
+  KrisSelect,
+  KrisSpinner,
+  KrisTree,
 } from '@kris-core/shadcn-ui';
 
 export type { FlattenedItem } from '@kris-core/shadcn-ui';

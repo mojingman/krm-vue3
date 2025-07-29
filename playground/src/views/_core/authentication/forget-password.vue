@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { VbenFormSchema } from '@kris/common-ui';
+import type { KrisFormSchema } from '@kris/common-ui';
 
 import { computed, ref } from 'vue';
 
@@ -10,10 +10,10 @@ defineOptions({ name: 'ForgetPassword' });
 
 const loading = ref(false);
 
-const formSchema = computed((): VbenFormSchema[] => {
+const formSchema = computed((): KrisFormSchema[] => {
   return [
     {
-      component: 'VbenInput',
+      component: 'KrisInput',
       componentProps: {
         placeholder: 'example@example.com',
       },

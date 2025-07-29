@@ -5,7 +5,7 @@ import { Page } from '@kris/common-ui';
 
 import { Button, Card, Switch } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useKrisForm } from '#/adapter/form';
 
 defineOptions({
   name: 'ScrollToErrorTest',
@@ -13,7 +13,7 @@ defineOptions({
 
 const scrollEnabled = ref(true);
 
-const [Form, formApi] = useVbenForm({
+const [Form, formApi] = useKrisForm({
   scrollToFirstError: scrollEnabled.value,
   schema: [
     {

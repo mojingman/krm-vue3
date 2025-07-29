@@ -5,11 +5,11 @@ import { Page } from '@kris/common-ui';
 
 import { Card } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useKrisForm } from '#/adapter/form';
 
 import DocButton from '../doc-button.vue';
 
-const [CustomLayoutForm] = useVbenForm({
+const [CustomLayoutForm] = useKrisForm({
   // 所有表单项共用，可单独在表单内覆盖
   commonConfig: {
     // 所有表单项
@@ -102,7 +102,7 @@ const [CustomLayoutForm] = useVbenForm({
       </div>
     </template>
     <template #extra>
-      <DocButton class="mb-2" path="/components/common-ui/vben-form" />
+      <DocButton class="mb-2" path="/components/common-ui/kris-form" />
     </template>
     <Card title="使用tailwind自定义布局">
       <CustomLayoutForm />

@@ -18,9 +18,9 @@ import {
   PaginationListItem,
   PaginationNext,
   PaginationPrev,
-  VbenIcon,
-  VbenIconButton,
-  VbenPopover,
+  KrisIcon,
+  KrisIconButton,
+  KrisPopover,
 } from '@kris-core/shadcn-ui';
 import { isFunction } from '@kris-core/shared/utils';
 
@@ -188,7 +188,7 @@ const getBindAttrs = computed(() => {
 defineExpose({ toggleOpenState, open, close });
 </script>
 <template>
-  <VbenPopover
+  <KrisPopover
     v-model:open="visible"
     :content-props="{ align: 'end', alignOffset: -11, sideOffset: 8 }"
     content-class="p-0 pt-3 w-full"
@@ -208,7 +208,7 @@ defineExpose({ toggleOpenState, open, close });
           v-bind="getBindAttrs"
         >
           <template #[iconSlot]>
-            <VbenIcon
+            <KrisIcon
               :icon="currentSelect || Grip"
               class="size-4"
               aria-hidden="true"
@@ -225,14 +225,14 @@ defineExpose({ toggleOpenState, open, close });
             :aria-label="$t('ui.iconPicker.placeholder')"
             aria-expanded="visible"
           />
-          <VbenIcon
+          <KrisIcon
             :icon="currentSelect || Grip"
             class="absolute right-1 top-1 size-6"
             aria-hidden="true"
           />
         </div>
       </template>
-      <VbenIcon
+      <KrisIcon
         :icon="currentSelect || Grip"
         v-else
         class="size-4"
@@ -255,20 +255,20 @@ defineExpose({ toggleOpenState, open, close });
 
     <template v-if="paginationList.length > 0">
       <div class="grid max-h-[360px] w-full grid-cols-6 justify-items-center">
-        <VbenIconButton
+        <KrisIconButton
           v-for="(item, index) in paginationList"
           :key="index"
           :tooltip="item"
           tooltip-side="top"
           @click="handleClick(item)"
         >
-          <VbenIcon
+          <KrisIcon
             :class="{
               'text-primary transition-all': currentSelect === item,
             }"
             :icon="item"
           />
-        </VbenIconButton>
+        </KrisIconButton>
       </div>
       <div
         v-if="total >= pageSize"
@@ -322,5 +322,5 @@ defineExpose({ toggleOpenState, open, close });
         <div class="mt-1 text-sm">{{ $t('common.noData') }}</div>
       </div>
     </template>
-  </VbenPopover>
+  </KrisPopover>
 </template>

@@ -6,7 +6,7 @@ import { RotateCw } from '@kris/icons';
 import { preferences, usePreferences } from '@kris/preferences';
 import { useAccessStore } from '@kris/stores';
 
-import { VbenFullScreen, VbenIconButton } from '@kris-core/shadcn-ui';
+import { KrisFullScreen, KrisIconButton } from '@kris-core/shadcn-ui';
 
 import {
   GlobalSearch,
@@ -120,9 +120,9 @@ function clearPreferencesAndLogout() {
   >
     <slot :name="slot.name">
       <template v-if="slot.name === 'refresh'">
-        <VbenIconButton class="my-0 mr-1 rounded-md" @click="refresh">
+        <KrisIconButton class="my-0 mr-1 rounded-md" @click="refresh">
           <RotateCw class="size-4" />
-        </VbenIconButton>
+        </KrisIconButton>
       </template>
     </slot>
   </template>
@@ -166,7 +166,7 @@ function clearPreferencesAndLogout() {
           <LanguageToggle class="mr-1" />
         </template>
         <template v-else-if="slot.name === 'fullscreen'">
-          <VbenFullScreen class="mr-1" />
+          <KrisFullScreen class="mr-1" />
         </template>
       </slot>
     </template>

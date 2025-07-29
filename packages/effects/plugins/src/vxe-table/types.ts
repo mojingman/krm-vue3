@@ -9,11 +9,11 @@ import type { Ref } from 'vue';
 
 import type { ClassType, DeepPartial } from '@kris/types';
 
-import type { BaseFormComponentType, VbenFormProps } from '@kris-core/form-ui';
+import type { BaseFormComponentType, KrisFormProps } from '@kris-core/form-ui';
 
 import type { VxeGridApi } from './api';
 
-import { useVbenForm } from '@kris-core/form-ui';
+import { useKrisForm } from '@kris-core/form-ui';
 
 export interface VxePaginationInfo {
   currentPage: number;
@@ -67,7 +67,7 @@ export interface VxeGridProps<
   /**
    * 表单配置
    */
-  formOptions?: VbenFormProps<D>;
+  formOptions?: KrisFormProps<D>;
   /**
    * 显示搜索表单
    */
@@ -89,5 +89,5 @@ export type ExtendedVxeGridApi<
 
 export interface SetupVxeTable {
   configVxeTable: (ui: VxeUIExport) => void;
-  useVbenForm: typeof useVbenForm;
+  useKrisForm: typeof useKrisForm;
 }

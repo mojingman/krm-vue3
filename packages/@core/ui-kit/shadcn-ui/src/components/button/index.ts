@@ -1,5 +1,5 @@
 export type * from './button';
-export { default as VbenButtonGroup } from './button-group.vue';
-export { default as VbenButton } from './button.vue';
-export { default as VbenCheckButtonGroup } from './check-button-group.vue';
-export { default as VbenIconButton } from './icon-button.vue';
+export { default as KrisButtonGroup } from './button-group.vue';
+export { default as KrisButton } from './button.vue';
+export { default as KrisCheckButtonGroup } from './check-button-group.vue';
+export { default as KrisIconButton } from './icon-button.vue';

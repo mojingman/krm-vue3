@@ -9,7 +9,7 @@ import { useDebounceFn } from '@vueuse/core';
 import { Button, Card, message, Spin, Tag } from 'ant-design-vue';
 import dayjs from 'dayjs';
 
-import { useVbenForm, z } from '#/adapter/form';
+import { useKrisForm, z } from '#/adapter/form';
 import { getAllMenusApi } from '#/api';
 import { upload_file } from '#/api/examples/upload';
 import { $t } from '#/locales';
@@ -33,7 +33,7 @@ function fetchRemoteOptions({ keyword = '选项' }: Record<string, any>) {
   });
 }
 
-const [BaseForm, baseFormApi] = useVbenForm({
+const [BaseForm, baseFormApi] = useKrisForm({
   // 所有表单项共用，可单独在表单内覆盖
   commonConfig: {
     // 在label后显示一个冒号
@@ -435,7 +435,7 @@ function handleSetFormValue() {
       </div>
     </template>
     <template #extra>
-      <DocButton class="mb-2" path="/components/common-ui/vben-form" />
+      <DocButton class="mb-2" path="/components/common-ui/kris-form" />
     </template>
     <Card title="基础示例">
       <template #extra>

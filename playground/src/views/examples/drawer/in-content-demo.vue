@@ -1,15 +1,15 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-import { useVbenDrawer } from '@kris/common-ui';
+import { useKrisDrawer } from '@kris/common-ui';
 
 import { Input, message } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useKrisForm } from '#/adapter/form';
 
 const value = ref('');
 
-const [Form] = useVbenForm({
+const [Form] = useKrisForm({
   schema: [
     {
       component: 'Input',
@@ -24,7 +24,7 @@ const [Form] = useVbenForm({
   showDefaultActions: false,
 });
 
-const [Drawer, drawerApi] = useVbenDrawer({
+const [Drawer, drawerApi] = useKrisDrawer({
   destroyOnClose: false,
   onCancel() {
     drawerApi.close();

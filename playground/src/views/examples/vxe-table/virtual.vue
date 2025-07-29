@@ -5,7 +5,7 @@ import { onMounted } from 'vue';
 
 import { Page } from '@kris/common-ui';
 
-import { useVbenVxeGrid } from '#/adapter/vxe-table';
+import { useKrisVxeGrid } from '#/adapter/vxe-table';
 
 interface RowType {
   id: number;
@@ -33,7 +33,7 @@ const gridOptions: VxeGridProps<RowType> = {
   showOverflow: true,
 };
 
-const [Grid, gridApi] = useVbenVxeGrid({ gridOptions });
+const [Grid, gridApi] = useKrisVxeGrid({ gridOptions });
 
 // 模拟行数据
 const loadList = (size = 200) => {

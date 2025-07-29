@@ -9,7 +9,7 @@ import { MenuBadge } from '@kris-core/menu-ui';
 
 import { Button, Card, Radio, RadioGroup } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useKrisForm } from '#/adapter/form';
 
 const colors = [
   { label: '预设：默认', value: 'default' },
@@ -28,7 +28,7 @@ const badgeProps = reactive({
   badgeVariants: menu?.badgeVariants as string,
 });
 
-const [Form] = useVbenForm({
+const [Form] = useKrisForm({
   handleValuesChange(values) {
     badgeProps.badge = values.badge;
     badgeProps.badgeType = values.badgeType;

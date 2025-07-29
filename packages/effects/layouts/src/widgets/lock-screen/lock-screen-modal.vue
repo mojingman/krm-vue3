@@ -5,9 +5,9 @@ import { computed, reactive } from 'vue';
 
 import { $t } from '@kris/locales';
 
-import { useVbenForm, z } from '@kris-core/form-ui';
-import { useVbenModal } from '@kris-core/popup-ui';
-import { VbenAvatar, VbenButton } from '@kris-core/shadcn-ui';
+import { useKrisForm, z } from '@kris-core/form-ui';
+import { useKrisModal } from '@kris-core/popup-ui';
+import { KrisAvatar, KrisButton } from '@kris-core/shadcn-ui';
 
 interface Props {
   avatar?: string;
@@ -27,7 +27,7 @@ const emit = defineEmits<{
   submit: [Recordable<any>];
 }>();
 
-const [Form, { resetForm, validate, getValues }] = useVbenForm(
+const [Form, { resetForm, validate, getValues }] = useKrisForm(
   reactive({
     commonConfig: {
       hideLabel: true,
@@ -35,7 +35,7 @@ const [Form, { resetForm, validate, getValues }] = useVbenForm(
     },
     schema: computed(() => [
       {
-        component: 'VbenInputPassword' as const,
+        component: 'KrisInputPassword' as const,
         componentProps: {
           placeholder: $t('ui.widgets.lockScreen.placeholder'),
         },
@@ -51,7 +51,7 @@ const [Form, { resetForm, validate, getValues }] = useVbenForm(
   }),
 );
 
-const [Modal] = useVbenModal({
+const [Modal] = useKrisModal({
   onConfirm() {
     handleSubmit();
   },
@@ -83,7 +83,7 @@ async function handleSubmit() {
     >
       <div class="w-full">
         <div class="ml-2 flex w-full flex-col items-center">
-          <VbenAvatar
+          <KrisAvatar
             :src="avatar"
             class="size-20"
             dot-class="bottom-0 right-1 border-2 size-4 bg-green-500"
@@ -93,9 +93,9 @@ async function handleSubmit() {
           </div>
         </div>
         <Form />
-        <VbenButton class="mt-1 w-full" @click="handleSubmit">
+        <KrisButton class="mt-1 w-full" @click="handleSubmit">
           {{ $t('ui.widgets.lockScreen.screenButton') }}
-        </VbenButton>
+        </KrisButton>
       </div>
     </div>
   </Modal>

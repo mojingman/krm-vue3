@@ -3,8 +3,8 @@ import type { CustomRenderType } from '../types';
 
 import {
   FormLabel,
-  VbenHelpTooltip,
-  VbenRenderContent,
+  KrisHelpTooltip,
+  KrisRenderContent,
 } from '@kris-core/shadcn-ui';
 import { cn } from '@kris-core/shared/utils';
 
@@ -23,9 +23,9 @@ const props = defineProps<Props>();
   <FormLabel :class="cn('flex items-center', props.class)">
     <span v-if="required" class="text-destructive mr-[2px]">*</span>
     <slot></slot>
-    <VbenHelpTooltip v-if="help" trigger-class="size-3.5 ml-1">
-      <VbenRenderContent :content="help" />
-    </VbenHelpTooltip>
+    <KrisHelpTooltip v-if="help" trigger-class="size-3.5 ml-1">
+      <KrisRenderContent :content="help" />
+    </KrisHelpTooltip>
     <span v-if="colon && label" class="ml-[2px]">:</span>
   </FormLabel>
 </template>

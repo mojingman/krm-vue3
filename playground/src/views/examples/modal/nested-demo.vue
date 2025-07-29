@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import { useVbenModal } from '@kris/common-ui';
+import { useKrisModal } from '@kris/common-ui';
 
 import { Button } from 'ant-design-vue';
 
 import DragDemo from './drag-demo.vue';
 
-const [Modal] = useVbenModal({
+const [Modal] = useKrisModal({
   destroyOnClose: true,
 });
-const [BaseModal, baseModalApi] = useVbenModal({
+const [BaseModal, baseModalApi] = useKrisModal({
   connectedComponent: DragDemo,
 });
 

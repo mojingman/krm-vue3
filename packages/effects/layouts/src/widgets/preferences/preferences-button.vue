@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { Settings } from '@kris/icons';
 
-import { VbenIconButton } from '@kris-core/shadcn-ui';
+import { KrisIconButton } from '@kris-core/shadcn-ui';
 
 import Preferences from './preferences.vue';
 
@@ -13,8 +13,8 @@ function clearPreferencesAndLogout() {
 </script>
 <template>
   <Preferences @clear-preferences-and-logout="clearPreferencesAndLogout">
-    <VbenIconButton>
+    <KrisIconButton>
       <Settings class="text-foreground size-4" />
-    </VbenIconButton>
+    </KrisIconButton>
   </Preferences>
 </template>

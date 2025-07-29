@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { useVbenModal } from '@kris/common-ui';
+import { useKrisModal } from '@kris/common-ui';
 
 import { Button, message } from 'ant-design-vue';
 
-const [Modal, modalApi] = useVbenModal({
+const [Modal, modalApi] = useKrisModal({
   onCancel() {
     modalApi.close();
   },

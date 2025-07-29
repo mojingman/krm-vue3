@@ -4,7 +4,7 @@ import type { NotificationItem } from '@kris/layouts';
 import { computed, onBeforeMount, ref, watch } from 'vue';
 
 import { AuthenticationLoginExpiredModal } from '@kris/common-ui';
-// import { VBEN_DOC_URL, VBEN_GITHUB_URL } from '@kris/constants';
+// import { KRIS_DOC_URL, KRIS_GITHUB_URL } from '@kris/constants';
 import { useWatermark } from '@kris/hooks';
 // import { BookOpenText, CircleHelp, MdiGithub } from '@kris/icons';
 import {
@@ -81,7 +81,7 @@ const showDot = computed(() =>
 const menus = computed(() => [
   /* {
     handler: () => {
-      openWindow(VBEN_DOC_URL, {
+      openWindow(KRIS_DOC_URL, {
         target: '_blank',
       });
     },
@@ -90,7 +90,7 @@ const menus = computed(() => [
   },
   {
     handler: () => {
-      openWindow(VBEN_GITHUB_URL, {
+      openWindow(KRIS_GITHUB_URL, {
         target: '_blank',
       });
     },
@@ -99,7 +99,7 @@ const menus = computed(() => [
   },
   {
     handler: () => {
-      openWindow(`${VBEN_GITHUB_URL}/issues`, {
+      openWindow(`${KRIS_GITHUB_URL}/issues`, {
         target: '_blank',
       });
     },

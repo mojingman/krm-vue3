@@ -7,7 +7,7 @@ import { Page, Tippy } from '@kris/common-ui';
 
 import { Button, Card, Flex } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useKrisForm } from '#/adapter/form';
 
 const tippyProps = reactive<TippyProps>({
   animation: 'shift-away',
@@ -38,7 +38,7 @@ function parseBoolean(value: string) {
   }
 }
 
-const [Form] = useVbenForm({
+const [Form] = useKrisForm({
   handleValuesChange(values) {
     Object.assign(tippyProps, {
       ...values,

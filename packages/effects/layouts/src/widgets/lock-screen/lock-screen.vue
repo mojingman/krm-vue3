@@ -6,8 +6,8 @@ import { $t, useI18n } from '@kris/locales';
 import { storeToRefs, useAccessStore } from '@kris/stores';
 
 import { useScrollLock } from '@kris-core/composables';
-import { useVbenForm, z } from '@kris-core/form-ui';
-import { VbenAvatar, VbenButton } from '@kris-core/shadcn-ui';
+import { useKrisForm, z } from '@kris-core/form-ui';
+import { KrisAvatar, KrisButton } from '@kris-core/shadcn-ui';
 
 import { useDateFormat, useNow } from '@vueuse/core';
 
@@ -37,7 +37,7 @@ const date = useDateFormat(now, 'YYYY-MM-DD dddd', { locales: locale.value });
 const showUnlockForm = ref(false);
 const { lockScreenPassword } = storeToRefs(accessStore);
 
-const [Form, { form, validate }] = useVbenForm(
+const [Form, { form, validate }] = useKrisForm(
   reactive({
     commonConfig: {
       hideLabel: true,
@@ -45,7 +45,7 @@ const [Form, { form, validate }] = useVbenForm(
     },
     schema: computed(() => [
       {
-        component: 'VbenInputPassword' as const,
+        component: 'KrisInputPassword' as const,
         componentProps: {
           placeholder: $t('ui.widgets.lockScreen.placeholder'),
         },
@@ -122,27 +122,27 @@ useScrollLock();
         @keydown.enter.prevent="handleSubmit"
       >
         <div class="flex-col-center mb-10 w-[90%] max-w-[300px] px-4">
-          <VbenAvatar :src="avatar" class="enter-x mb-6 size-20" />
+          <KrisAvatar :src="avatar" class="enter-x mb-6 size-20" />
           <div class="enter-x mb-2 w-full items-center">
             <Form />
           </div>
-          <VbenButton class="enter-x w-full" @click="handleSubmit">
+          <KrisButton class="enter-x w-full" @click="handleSubmit">
             {{ $t('ui.widgets.lockScreen.entry') }}
-          </VbenButton>
-          <VbenButton
+          </KrisButton>
+          <KrisButton
             class="enter-x my-2 w-full"
             variant="ghost"
             @click="$emit('toLogin')"
           >
             {{ $t('ui.widgets.lockScreen.backToLogin') }}
-          </VbenButton>
-          <VbenButton
+          </KrisButton>
+          <KrisButton
             class="enter-x mr-2 w-full"
             variant="ghost"
             @click="toggleUnlockForm"
           >
             {{ $t('common.back') }}
-          </VbenButton>
+          </KrisButton>
         </div>
       </div>
     </transition>

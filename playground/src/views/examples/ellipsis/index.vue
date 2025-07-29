@@ -18,7 +18,7 @@ const text = ref(longText);
     title="文本省略组件示例"
   >
     <template #extra>
-      <DocButton class="mb-2" path="/components/common-ui/vben-ellipsis-text" />
+      <DocButton class="mb-2" path="/components/common-ui/kris-ellipsis-text" />
     </template>
     <Card class="mb-4" title="基本使用">
       <EllipsisText :max-width="500">{{ text }}</EllipsisText>

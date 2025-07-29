@@ -4,7 +4,7 @@ import type {
   VxeTableGridOptions,
 } from '#/adapter/vxe-table';
 
-import { Page, useVbenDrawer } from '@kris/common-ui';
+import { Page, useKrisDrawer } from '@kris/common-ui';
 import { IconifyIcon, Plus } from '@kris/icons';
 import { $t } from '@kris/locales';
 
@@ -12,18 +12,18 @@ import { MenuBadge } from '@kris-core/menu-ui';
 
 import { Button, message } from 'ant-design-vue';
 
-import { useVbenVxeGrid } from '#/adapter/vxe-table';
+import { useKrisVxeGrid } from '#/adapter/vxe-table';
 import { deleteMenu, getMenuList, SystemMenuApi } from '#/api/system/menu';
 
 import { useColumns } from './data';
 import Form from './modules/form.vue';
 
-const [FormDrawer, formDrawerApi] = useVbenDrawer({
+const [FormDrawer, formDrawerApi] = useKrisDrawer({
   connectedComponent: Form,
   destroyOnClose: true,
 });
 
-const [Grid, gridApi] = useVbenVxeGrid({
+const [Grid, gridApi] = useKrisVxeGrid({
   gridOptions: {
     columns: useColumns(onActionClick),
     height: 'auto',

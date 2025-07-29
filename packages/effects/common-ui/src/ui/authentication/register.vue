@@ -1,20 +1,20 @@
 <script setup lang="ts">
 import type { Recordable } from '@kris/types';
 
-import type { VbenFormSchema } from '@kris-core/form-ui';
+import type { KrisFormSchema } from '@kris-core/form-ui';
 
 import { computed, reactive } from 'vue';
 import { useRouter } from 'vue-router';
 
 import { $t } from '@kris/locales';
 
-import { useVbenForm } from '@kris-core/form-ui';
-import { VbenButton } from '@kris-core/shadcn-ui';
+import { useKrisForm } from '@kris-core/form-ui';
+import { KrisButton } from '@kris-core/shadcn-ui';
 
 import Title from './auth-title.vue';
 
 interface Props {
-  formSchema?: VbenFormSchema[];
+  formSchema?: KrisFormSchema[];
   /**
    * @zh_CN 是否处于加载处理状态
    */
@@ -54,7 +54,7 @@ const emit = defineEmits<{
   submit: [Recordable<any>];
 }>();
 
-const [Form, formApi] = useVbenForm(
+const [Form, formApi] = useKrisForm(
   reactive({
     commonConfig: {
       hideLabel: true,
@@ -98,7 +98,7 @@ defineExpose({
     </Title>
     <Form />
 
-    <VbenButton
+    <KrisButton
       :class="{
         'cursor-wait': loading,
       }"
@@ -110,10 +110,10 @@ defineExpose({
       <slot name="submitButtonText">
         {{ submitButtonText || $t('authentication.signUp') }}
       </slot>
-    </VbenButton>
+    </KrisButton>
     <div class="mt-4 text-center text-sm">
       {{ $t('authentication.alreadyHaveAccount') }}
-      <span class="vben-link text-sm font-normal" @click="goToLogin()">
+      <span class="kris-link text-sm font-normal" @click="goToLogin()">
         {{ $t('authentication.goToLogin') }}
       </span>
     </div>

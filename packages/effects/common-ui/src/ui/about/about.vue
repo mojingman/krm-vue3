@@ -4,12 +4,12 @@ import type { AboutProps, DescriptionItem } from './about';
 import { h } from 'vue';
 
 import {
-  VBEN_DOC_URL,
-  VBEN_GITHUB_URL,
-  VBEN_PREVIEW_URL,
+  KRIS_DOC_URL,
+  KRIS_GITHUB_URL,
+  KRIS_PREVIEW_URL,
 } from '@kris/constants';
 
-import { VbenRenderContent } from '@kris-core/shadcn-ui';
+import { KrisRenderContent } from '@kris-core/shadcn-ui';
 
 import { Page } from '../../components';
 
@@ -27,7 +27,7 @@ withDefaults(defineProps<Props>(), {
 });
 
 declare global {
-  const __VBEN_ADMIN_METADATA__: {
+  const __KRIS_METADATA__: {
     authorEmail: string;
     authorName: string;
     authorUrl: string;
@@ -45,7 +45,7 @@ declare global {
 const renderLink = (href: string, text: string) =>
   h(
     'a',
-    { href, target: '_blank', class: 'vben-link' },
+    { href, target: '_blank', class: 'kris-link' },
     { default: () => text },
   );
 
@@ -60,9 +60,9 @@ const {
   license,
   version,
   // vite inject-metadata 插件注入的全局变量
-} = __VBEN_ADMIN_METADATA__ || {};
+} = __KRIS_METADATA__ || {};
 
-const vbenDescriptionItems: DescriptionItem[] = [
+const krisDescriptionItems: DescriptionItem[] = [
   {
     content: version,
     title: '版本号',
@@ -80,15 +80,15 @@ const vbenDescriptionItems: DescriptionItem[] = [
     title: '主页',
   },
   {
-    content: renderLink(VBEN_DOC_URL, '点击查看'),
+    content: renderLink(KRIS_DOC_URL, '点击查看'),
     title: '文档地址',
   },
   {
-    content: renderLink(VBEN_PREVIEW_URL, '点击查看'),
+    content: renderLink(KRIS_PREVIEW_URL, '点击查看'),
     title: '预览地址',
   },
   {
-    content: renderLink(VBEN_GITHUB_URL, '点击查看'),
+    content: renderLink(KRIS_GITHUB_URL, '点击查看'),
     title: 'Github',
   },
   {
@@ -115,7 +115,7 @@ const devDependenciesItems = Object.keys(devDependencies).map((key) => ({
   <Page :title="title">
     <template #description>
       <p class="text-foreground mt-3 text-sm leading-6">
-        <a :href="VBEN_GITHUB_URL" class="vben-link" target="_blank">
+        <a :href="KRIS_GITHUB_URL" class="kris-link" target="_blank">
           {{ name }}
         </a>
         {{ description }}
@@ -127,13 +127,13 @@ const devDependenciesItems = Object.keys(devDependencies).map((key) => ({
       </div>
       <div class="mt-4">
         <dl class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <template v-for="item in vbenDescriptionItems" :key="item.title">
+          <template v-for="item in krisDescriptionItems" :key="item.title">
             <div class="border-border border-t px-4 py-6 sm:col-span-1 sm:px-0">
               <dt class="text-foreground text-sm font-medium leading-6">
                 {{ item.title }}
               </dt>
               <dd class="text-foreground mt-1 text-sm leading-6 sm:mt-2">
-                <VbenRenderContent :content="item.content" />
+                <KrisRenderContent :content="item.content" />
               </dd>
             </div>
           </template>
@@ -153,7 +153,7 @@ const devDependenciesItems = Object.keys(devDependencies).map((key) => ({
                 {{ item.title }}
               </dt>
               <dd class="text-foreground/80 mt-1 text-sm sm:mt-2">
-                <VbenRenderContent :content="item.content" />
+                <KrisRenderContent :content="item.content" />
               </dd>
             </div>
           </template>
@@ -172,7 +172,7 @@ const devDependenciesItems = Object.keys(devDependencies).map((key) => ({
                 {{ item.title }}
               </dt>
               <dd class="text-foreground/80 mt-1 text-sm sm:mt-2">
-                <VbenRenderContent :content="item.content" />
+                <KrisRenderContent :content="item.content" />
               </dd>
             </div>
           </template>

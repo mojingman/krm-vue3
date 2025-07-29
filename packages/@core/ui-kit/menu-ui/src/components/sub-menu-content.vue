@@ -5,7 +5,7 @@ import { computed } from 'vue';
 
 import { useNamespace } from '@kris-core/composables';
 import { ChevronDown, ChevronRight } from '@kris-core/icons';
-import { VbenIcon } from '@kris-core/shadcn-ui';
+import { KrisIcon } from '@kris-core/shadcn-ui';
 
 import { useMenuContext } from '../hooks';
 
@@ -82,7 +82,7 @@ const iconArrowStyle = computed(() => {
   >
     <slot></slot>
 
-    <VbenIcon
+    <KrisIcon
       v-if="!isMenuMore"
       :class="nsMenu.e('icon')"
       :icon="icon"

@@ -8,8 +8,8 @@ import { h } from 'vue';
 import { IconifyIcon } from '@kris/icons';
 import { $te } from '@kris/locales';
 import {
-  setupVbenVxeTable,
-  useVbenVxeGrid as useGrid,
+  setupKrisVxeTable,
+  useKrisVxeGrid as useGrid,
 } from '@kris/plugins/vxe-table';
 import { get, isFunction, isString } from '@kris/utils';
 
@@ -18,9 +18,9 @@ import { Button, Image, Popconfirm, Switch, Tag } from 'ant-design-vue';
 
 import { $t } from '#/locales';
 
-import { useVbenForm } from './form';
+import { useKrisForm } from './form';
 
-setupVbenVxeTable({
+setupKrisVxeTable({
   configVxeTable: (vxeUI) => {
     vxeUI.setConfig({
       grid: {
@@ -280,10 +280,10 @@ setupVbenVxeTable({
     // 这里可以自行扩展 vxe-table 的全局配置，比如自定义格式化
     // vxeUI.formats.add
   },
-  useVbenForm,
+  useKrisForm,
 });
 
-export const useVbenVxeGrid = <T extends Record<string, any>>(
+export const useKrisVxeGrid = <T extends Record<string, any>>(
   ...rest: Parameters<typeof useGrid<T, ComponentType>>
 ) => useGrid<T, ComponentType>(...rest);
 

@@ -7,7 +7,7 @@ import { useRoute } from 'vue-router';
 import { preferences } from '@kris/preferences';
 import { useTabbarStore } from '@kris/stores';
 
-import { VbenSpinner } from '@kris-core/shadcn-ui';
+import { KrisSpinner } from '@kris-core/shadcn-ui';
 
 defineOptions({ name: 'IFrameRouterView' });
 
@@ -74,7 +74,7 @@ function showSpinning(index: number) {
         v-show="routeShow(item)"
         class="relative size-full"
       >
-        <VbenSpinner :spinning="showSpinning(index)" />
+        <KrisSpinner :spinning="showSpinning(index)" />
         <iframe
           :src="item.meta.iframeSrc as string"
           class="size-full"

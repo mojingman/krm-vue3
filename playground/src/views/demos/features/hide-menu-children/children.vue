@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Fallback, VbenButton } from '@kris/common-ui';
+import { Fallback, KrisButton } from '@kris/common-ui';
 import { useTabs } from '@kris/hooks';
 import { X } from '@kris/icons';
 
@@ -14,10 +14,10 @@ const { closeCurrentTab } = useTabs();
     show-back
   >
     <template #action>
-      <VbenButton size="lg" @click="closeCurrentTab()">
+      <KrisButton size="lg" @click="closeCurrentTab()">
         <X class="mr-2 size-4" />
         关闭当前标签页
-      </VbenButton>
+      </KrisButton>
     </template>
   </Fallback>
 </template>

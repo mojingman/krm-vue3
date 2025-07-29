@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router';
 
 import { $t } from '@kris/locales';
 
-import { VbenButton } from '@kris-core/shadcn-ui';
+import { KrisButton } from '@kris-core/shadcn-ui';
 
 import { useQRCode } from '@vueuse/integrations/useQRCode';
 
@@ -88,8 +88,8 @@ function goToLogin() {
       </p>
     </div>
 
-    <VbenButton class="mt-4 w-full" variant="outline" @click="goToLogin()">
+    <KrisButton class="mt-4 w-full" variant="outline" @click="goToLogin()">
       {{ $t('common.back') }}
-    </VbenButton>
+    </KrisButton>
   </div>
 </template>

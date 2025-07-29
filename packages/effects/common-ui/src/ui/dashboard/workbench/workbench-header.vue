@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { VbenAvatar } from '@kris-core/shadcn-ui';
+import { KrisAvatar } from '@kris-core/shadcn-ui';
 import { $t } from '@kris/locales';
 interface Props {
   avatar?: string;
@@ -15,7 +15,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 <template>
   <div class="card-box p-4 py-6 lg:flex">
-    <VbenAvatar :src="avatar" class="size-20" />
+    <KrisAvatar :src="avatar" class="size-20" />
     <div
       v-if="$slots.title || $slots.description"
       class="flex flex-col justify-center md:ml-6 md:mt-0"

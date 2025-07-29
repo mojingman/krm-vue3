@@ -7,12 +7,12 @@ import type { SystemRoleApi } from '#/api/system/role';
 
 import { computed, ref } from 'vue';
 
-import { useVbenDrawer, VbenTree } from '@kris/common-ui';
+import { useKrisDrawer, KrisTree } from '@kris/common-ui';
 import { IconifyIcon } from '@kris/icons';
 
 import { Spin } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useKrisForm } from '#/adapter/form';
 import { getMenuList } from '#/api/system/menu';
 import { createRole, updateRole } from '#/api/system/role';
 import { $t } from '#/locales';
@@ -23,7 +23,7 @@ const emits = defineEmits(['success']);
 
 const formData = ref<SystemRoleApi.SystemRole>();
 
-const [Form, formApi] = useVbenForm({
+const [Form, formApi] = useKrisForm({
   schema: useFormSchema(),
   showDefaultActions: false,
 });
@@ -32,7 +32,7 @@ const permissions = ref<DataNode[]>([]);
 const loadingPermissions = ref(false);
 
 const id = ref();
-const [Drawer, drawerApi] = useVbenDrawer({
+const [Drawer, drawerApi] = useKrisDrawer({
   async onConfirm() {
     const { valid } = await formApi.validate();
     if (!valid) return;
@@ -99,7 +99,7 @@ function getNodeClass(node: Recordable<any>) {
     <Form>
       <template #permissions="slotProps">
         <Spin :spinning="loadingPermissions" wrapper-class-name="w-full">
-          <VbenTree
+          <KrisTree
             :tree-data="permissions"
             multiple
             bordered
@@ -114,7 +114,7 @@ function getNodeClass(node: Recordable<any>) {
               <IconifyIcon v-if="value.meta.icon" :icon="value.meta.icon" />
               {{ $t(value.meta.title) }}
             </template>
-          </VbenTree>
+          </KrisTree>
         </Spin>
       </template>
     </Form>

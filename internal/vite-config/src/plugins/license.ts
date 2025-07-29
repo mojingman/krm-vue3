@@ -32,8 +32,8 @@ async function viteLicensePlugin(
         const copyrightText = `/*!
   * KRIS KRM
   * Version: ${version}
-  * Author: chenkai
-  * Copyright (C) 2024 Vben
+  * Author: ChenKai
+  * Copyright (C) 2024 SQLVIEW
   * License: MIT License
   * Description: ${description}
   * Date Created: ${date}

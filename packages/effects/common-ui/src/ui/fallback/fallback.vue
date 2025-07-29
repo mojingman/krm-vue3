@@ -7,7 +7,7 @@ import { useRouter } from 'vue-router';
 import { ArrowLeft, RotateCw } from '@kris/icons';
 import { $t } from '@kris/locales';
 
-import { VbenButton } from '@kris-core/shadcn-ui';
+import { KrisButton } from '@kris-core/shadcn-ui';
 
 interface Props extends FallbackProps {}
 
@@ -151,14 +151,14 @@ function refresh() {
         {{ descText }}
       </p>
       <slot v-if="$slots.action" name="action"></slot>
-      <VbenButton v-else-if="showBack" size="lg" @click="back">
+      <KrisButton v-else-if="showBack" size="lg" @click="back">
         <ArrowLeft class="mr-2 size-4" />
         {{ $t('common.backToHome') }}
-      </VbenButton>
-      <VbenButton v-else-if="showRefresh" size="lg" @click="refresh">
+      </KrisButton>
+      <KrisButton v-else-if="showRefresh" size="lg" @click="refresh">
         <RotateCw class="mr-2 size-4" />
         {{ $t('common.refresh') }}
-      </VbenButton>
+      </KrisButton>
     </div>
   </div>
 </template>

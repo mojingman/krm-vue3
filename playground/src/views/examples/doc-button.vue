@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { VBEN_DOC_URL } from '@kris/constants';
+import { KRIS_DOC_URL } from '@kris/constants';
 import { openWindow } from '@kris/utils';
 
 import { Button } from 'ant-design-vue';
@@ -9,7 +9,7 @@ const props = defineProps<{ path: string }>();
 function handleClick() {
   // 如果没有.html，打开页面时可能会出现404
   const path =
-    VBEN_DOC_URL +
+    KRIS_DOC_URL +
     (props.path.toLowerCase().endsWith('.html')
       ? props.path
       : `${props.path}.html`);

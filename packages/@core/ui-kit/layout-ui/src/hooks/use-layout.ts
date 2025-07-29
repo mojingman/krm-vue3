@@ -1,10 +1,10 @@
 import type { LayoutType } from '@kris-core/typings';
 
-import type { VbenLayoutProps } from '../vben-layout';
+import type { KrisLayoutProps } from '../kris-layout';
 
 import { computed } from 'vue';
 
-export function useLayout(props: VbenLayoutProps) {
+export function useLayout(props: KrisLayoutProps) {
   const currentLayout = computed(() =>
     props.isMobile ? 'sidebar-nav' : (props.layout as LayoutType),
   );

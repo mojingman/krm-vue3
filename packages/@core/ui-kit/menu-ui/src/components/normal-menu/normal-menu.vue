@@ -4,7 +4,7 @@ import type { MenuRecordRaw } from '@kris-core/typings';
 import type { NormalMenuProps } from './normal-menu';
 
 import { useNamespace } from '@kris-core/composables';
-import { VbenIcon } from '@kris-core/shadcn-ui';
+import { KrisIcon } from '@kris-core/shadcn-ui';
 
 interface Props extends NormalMenuProps {}
 
@@ -50,7 +50,7 @@ function menuIcon(menu: MenuRecordRaw) {
         @click="() => emit('select', menu)"
         @mouseenter="() => emit('enter', menu)"
       >
-        <VbenIcon :class="e('icon')" :icon="menuIcon(menu)" fallback />
+        <KrisIcon :class="e('icon')" :icon="menuIcon(menu)" fallback />
 
         <span :class="e('name')" class="truncate"> {{ menu.name }}</span>
       </li>
@@ -58,7 +58,7 @@ function menuIcon(menu: MenuRecordRaw) {
   </ul>
 </template>
 <style lang="scss" scoped>
-$namespace: vben;
+$namespace: kris;
 
 .#{$namespace}-normal-menu {
   --menu-item-margin-y: 4px;

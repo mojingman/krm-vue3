@@ -38,7 +38,7 @@ function getResponse() {
         @click="
           downloadFileFromUrl({
             source:
-              'https://codeload.github.com/vbenjs/vue-vben-admin-doc/zip/main',
+              'https://codeload.github.com/mojingman/krm-vue3-doc/zip/main',
             target: '_self',
           })
         "
@@ -53,7 +53,7 @@ function getResponse() {
         @click="
           downloadFileFromImageUrl({
             source: 'https://mykris.sqlview.com.sg/KRIS/images/KRIS.png',
-            fileName: 'vben-logo.png',
+            fileName: 'kris-logo.png',
           })
         "
       >

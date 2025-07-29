@@ -1,2 +1,2 @@
-export type * from './vben-layout';
-export { default as VbenAdminLayout } from './vben-layout.vue';
+export type * from './kris-layout';
+export { default as KrisAdminLayout } from './kris-layout.vue';

@@ -13,7 +13,7 @@ import {
 import { $t } from '@kris/locales';
 import { isWindowsOs } from '@kris/utils';
 
-import { useVbenModal } from '@kris-core/popup-ui';
+import { useKrisModal } from '@kris-core/popup-ui';
 
 import { useMagicKeys, whenever } from '@vueuse/core';
 
@@ -34,7 +34,7 @@ const props = withDefaults(
 const keyword = ref('');
 const searchInputRef = ref<HTMLInputElement>();
 
-const [Modal, modalApi] = useVbenModal({
+const [Modal, modalApi] = useKrisModal({
   onCancel() {
     modalApi.close();
   },

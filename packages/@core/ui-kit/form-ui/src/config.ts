@@ -3,18 +3,18 @@ import type { Component } from 'vue';
 import type {
   BaseFormComponentType,
   FormCommonConfig,
-  VbenFormAdapterOptions,
+  KrisFormAdapterOptions,
 } from './types';
 
 import { h } from 'vue';
 
 import {
-  VbenButton,
-  VbenCheckbox,
-  Input as VbenInput,
-  VbenInputPassword,
-  VbenPinInput,
-  VbenSelect,
+  KrisButton,
+  KrisCheckbox,
+  Input as KrisInput,
+  KrisInputPassword,
+  KrisPinInput,
+  KrisSelect,
 } from '@kris-core/shadcn-ui';
 import { globalShareState } from '@kris-core/shared/global-state';
 
@@ -25,24 +25,24 @@ const DEFAULT_MODEL_PROP_NAME = 'modelValue';
 export const DEFAULT_FORM_COMMON_CONFIG: FormCommonConfig = {};
 
 export const COMPONENT_MAP: Record<BaseFormComponentType, Component> = {
-  DefaultButton: h(VbenButton, { size: 'sm', variant: 'outline' }),
-  PrimaryButton: h(VbenButton, { size: 'sm', variant: 'default' }),
-  VbenCheckbox,
-  VbenInput,
-  VbenInputPassword,
-  VbenPinInput,
-  VbenSelect,
+  DefaultButton: h(KrisButton, { size: 'sm', variant: 'outline' }),
+  PrimaryButton: h(KrisButton, { size: 'sm', variant: 'default' }),
+  KrisCheckbox,
+  KrisInput,
+  KrisInputPassword,
+  KrisPinInput,
+  KrisSelect,
 };
 
 export const COMPONENT_BIND_EVENT_MAP: Partial<
   Record<BaseFormComponentType, string>
 > = {
-  VbenCheckbox: 'checked',
+  KrisCheckbox: 'checked',
 };
 
-export function setupVbenForm<
+export function setupKrisForm<
   T extends BaseFormComponentType = BaseFormComponentType,
->(options: VbenFormAdapterOptions<T>) {
+>(options: KrisFormAdapterOptions<T>) {
   const { config, defineRules } = options;
 
   const {

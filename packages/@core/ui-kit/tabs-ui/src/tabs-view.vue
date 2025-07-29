@@ -3,7 +3,7 @@ import type { TabsEmits, TabsProps } from './types';
 
 import { useForwardPropsEmits } from '@kris-core/composables';
 import { ChevronLeft, ChevronRight } from '@kris-core/icons';
-import { VbenScrollbar } from '@kris-core/shadcn-ui';
+import { KrisScrollbar } from '@kris-core/shadcn-ui';
 
 import { Tabs, TabsChrome } from './components';
 import { useTabsDrag } from './use-tabs-drag';
@@ -16,7 +16,7 @@ defineOptions({
 });
 
 const props = withDefaults(defineProps<Props>(), {
-  contentClass: 'vben-tabs-content',
+  contentClass: 'kris-tabs-content',
   draggable: true,
   styleType: 'chrome',
   wheelable: true,
@@ -68,7 +68,7 @@ useTabsDrag(props, emit);
       }"
       class="size-full flex-1 overflow-hidden"
     >
-      <VbenScrollbar
+      <KrisScrollbar
         ref="scrollbarRef"
         :shadow-bottom="false"
         :shadow-top="false"
@@ -87,7 +87,7 @@ useTabsDrag(props, emit);
         />
 
         <Tabs v-else v-bind="{ ...forward, ...$attrs, ...$props }" />
-      </VbenScrollbar>
+      </KrisScrollbar>
     </div>
 
     <!-- 右侧滚动按钮 -->

@@ -44,7 +44,7 @@ function defineApplicationConfig(userConfigPromise?: DefineApplicationOptions) {
       nitroMockOptions: {},
       print: !isBuild,
       printInfoMap: {
-        // 'KRIS KRM Docs': 'https://doc.vben.pro',
+        // 'KRIS KRM Docs': 'https://sqlview.com.sg/document-management-system-singapore/',
       },
       pwa: true,
       pwaOptions: getDefaultPwaOptions(appTitle),

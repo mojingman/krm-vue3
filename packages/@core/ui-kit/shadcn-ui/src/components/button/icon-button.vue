@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import type { ButtonVariants } from '../../ui';
-import type { VbenButtonProps } from './button';
+import type { KrisButtonProps } from './button';
 
 import { computed, useSlots } from 'vue';
 
 import { cn } from '@kris-core/shared/utils';
 
-import { VbenTooltip } from '../tooltip';
-import VbenButton from './button.vue';
+import { KrisTooltip } from '../tooltip';
+import KrisButton from './button.vue';
 
-interface Props extends VbenButtonProps {
+interface Props extends KrisButtonProps {
   class?: any;
   disabled?: boolean;
   onClick?: () => void;
@@ -33,7 +33,7 @@ const showTooltip = computed(() => !!slots.tooltip || !!props.tooltip);
 </script>
 
 <template>
-  <VbenButton
+  <KrisButton
     v-if="!showTooltip"
     :class="cn('rounded-full', props.class)"
     :disabled="disabled"
@@ -42,15 +42,15 @@ const showTooltip = computed(() => !!slots.tooltip || !!props.tooltip);
     @click="onClick"
   >
     <slot></slot>
-  </VbenButton>
+  </KrisButton>
 
-  <VbenTooltip
+  <KrisTooltip
     v-else
     :delay-duration="tooltipDelayDuration"
     :side="tooltipSide"
   >
     <template #trigger>
-      <VbenButton
+      <KrisButton
         :class="cn('rounded-full', props.class)"
         :disabled="disabled"
         :variant="variant"
@@ -58,11 +58,11 @@ const showTooltip = computed(() => !!slots.tooltip || !!props.tooltip);
         @click="onClick"
       >
         <slot></slot>
-      </VbenButton>
+      </KrisButton>
     </template>
     <slot v-if="slots.tooltip" name="tooltip"> </slot>
     <template v-else>
       {{ tooltip }}
     </template>
-  </VbenTooltip>
+  </KrisTooltip>
 </template>

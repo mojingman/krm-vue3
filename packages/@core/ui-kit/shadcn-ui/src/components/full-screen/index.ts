@@ -1,1 +1,1 @@
-export { default as VbenFullScreen } from './full-screen.vue';
+export { default as KrisFullScreen } from './full-screen.vue';

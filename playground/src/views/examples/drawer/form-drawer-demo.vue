@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { useVbenDrawer } from '@kris/common-ui';
+import { useKrisDrawer } from '@kris/common-ui';
 
-import { useVbenForm } from '#/adapter/form';
+import { useKrisForm } from '#/adapter/form';
 
 defineOptions({
   name: 'FormDrawerDemo',
 });
 
-const [Form, formApi] = useVbenForm({
+const [Form, formApi] = useKrisForm({
   schema: [
     {
       component: 'Input',
@@ -30,7 +30,7 @@ const [Form, formApi] = useVbenForm({
   ],
   showDefaultActions: false,
 });
-const [Drawer, drawerApi] = useVbenDrawer({
+const [Drawer, drawerApi] = useKrisDrawer({
   onCancel() {
     drawerApi.close();
   },

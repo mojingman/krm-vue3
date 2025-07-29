@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { AuthPageLayoutType } from '@kris/types';
 
-import type { VbenDropdownMenuItem } from '@kris-core/shadcn-ui';
+import type { KrisDropdownMenuItem } from '@kris-core/shadcn-ui';
 
 import { computed } from 'vue';
 
@@ -13,13 +13,13 @@ import {
   usePreferences,
 } from '@kris/preferences';
 
-import { VbenDropdownRadioMenu, VbenIconButton } from '@kris-core/shadcn-ui';
+import { KrisDropdownRadioMenu, KrisIconButton } from '@kris-core/shadcn-ui';
 
 defineOptions({
   name: 'AuthenticationLayoutToggle',
 });
 
-const menus = computed((): VbenDropdownMenuItem[] => [
+const menus = computed((): KrisDropdownMenuItem[] => [
   {
     icon: PanelLeft,
     label: $t('authentication.layout.alignLeft'),
@@ -50,15 +50,15 @@ function handleUpdate(value: string | undefined) {
 </script>
 
 <template>
-  <VbenDropdownRadioMenu
+  <KrisDropdownRadioMenu
     :menus="menus"
     :model-value="preferences.app.authPageLayout"
     @update:model-value="handleUpdate"
   >
-    <VbenIconButton>
+    <KrisIconButton>
       <PanelRight v-if="authPanelRight" class="size-4" />
       <PanelLeft v-if="authPanelLeft" class="size-4" />
       <InspectionPanel v-if="authPanelCenter" class="size-4" />
-    </VbenIconButton>
-  </VbenDropdownRadioMenu>
+    </KrisIconButton>
+  </KrisDropdownRadioMenu>
 </template>

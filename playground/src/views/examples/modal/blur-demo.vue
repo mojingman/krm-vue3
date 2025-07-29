@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue';
 
-import { useVbenModal } from '@kris/common-ui';
+import { useKrisModal } from '@kris/common-ui';
 
 import { Slider } from 'ant-design-vue';
 
 const blur = ref(5);
-const [Modal, modalApi] = useVbenModal({
+const [Modal, modalApi] = useKrisModal({
   overlayBlur: blur.value,
 });
 watch(blur, (val) => {

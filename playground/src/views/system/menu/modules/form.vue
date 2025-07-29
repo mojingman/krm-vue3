@@ -3,18 +3,18 @@ import type { ChangeEvent } from 'ant-design-vue/es/_util/EventInterface';
 
 import type { Recordable } from '@kris/types';
 
-import type { VbenFormSchema } from '#/adapter/form';
+import type { KrisFormSchema } from '#/adapter/form';
 
 import { computed, h, ref } from 'vue';
 
-import { useVbenDrawer } from '@kris/common-ui';
+import { useKrisDrawer } from '@kris/common-ui';
 import { IconifyIcon } from '@kris/icons';
 import { $te } from '@kris/locales';
 import { getPopupContainer } from '@kris/utils';
 
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
 
-import { useVbenForm, z } from '#/adapter/form';
+import { useKrisForm, z } from '#/adapter/form';
 import {
   createMenu,
   getMenuList,
@@ -33,7 +33,7 @@ const emit = defineEmits<{
 }>();
 const formData = ref<SystemMenuApi.SystemMenu>();
 const titleSuffix = ref<string>();
-const schema: VbenFormSchema[] = [
+const schema: KrisFormSchema[] = [
   {
     component: 'RadioGroup',
     componentProps: {
@@ -433,7 +433,7 @@ const schema: VbenFormSchema[] = [
 const breakpoints = useBreakpoints(breakpointsTailwind);
 const isHorizontal = computed(() => breakpoints.greaterOrEqual('md').value);
 
-const [Form, formApi] = useVbenForm({
+const [Form, formApi] = useKrisForm({
   commonConfig: {
     colon: true,
     formItemClass: 'col-span-2 md:col-span-1',
@@ -443,7 +443,7 @@ const [Form, formApi] = useVbenForm({
   wrapperClass: 'grid-cols-2 gap-x-4',
 });
 
-const [Drawer, drawerApi] = useVbenDrawer({
+const [Drawer, drawerApi] = useKrisDrawer({
   onConfirm: onSubmit,
   onOpenChange(isOpen) {
     if (isOpen) {

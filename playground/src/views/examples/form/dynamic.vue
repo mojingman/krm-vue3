@@ -3,9 +3,9 @@ import { Page } from '@kris/common-ui';
 
 import { Button, Card, message } from 'ant-design-vue';
 
-import { useVbenForm } from '#/adapter/form';
+import { useKrisForm } from '#/adapter/form';
 
-const [Form, formApi] = useVbenForm({
+const [Form, formApi] = useKrisForm({
   // 提交函数
   handleSubmit: onSubmit,
   schema: [
@@ -163,7 +163,7 @@ const [Form, formApi] = useVbenForm({
   wrapperClass: 'grid-cols-1 md:grid-cols-3 lg:grid-cols-4',
 });
 
-const [SyncForm] = useVbenForm({
+const [SyncForm] = useKrisForm({
   handleSubmit: onSubmit,
   schema: [
     {

@@ -2,13 +2,13 @@ import type { VxeTableGridOptions } from '@kris/plugins/vxe-table';
 
 import { h } from 'vue';
 
-import { setupVbenVxeTable, useVbenVxeGrid } from '@kris/plugins/vxe-table';
+import { setupKrisVxeTable, useKrisVxeGrid } from '@kris/plugins/vxe-table';
 
 import { Button, Image } from 'ant-design-vue';
 
-import { useVbenForm } from './form';
+import { useKrisForm } from './form';
 
-setupVbenVxeTable({
+setupKrisVxeTable({
   configVxeTable: (vxeUI) => {
     vxeUI.setConfig({
       grid: {
@@ -61,9 +61,9 @@ setupVbenVxeTable({
     // 这里可以自行扩展 vxe-table 的全局配置，比如自定义格式化
     // vxeUI.formats.add
   },
-  useVbenForm,
+  useKrisForm,
 });
 
-export { useVbenVxeGrid };
+export { useKrisVxeGrid };
 
 export type * from '@kris/plugins/vxe-table';

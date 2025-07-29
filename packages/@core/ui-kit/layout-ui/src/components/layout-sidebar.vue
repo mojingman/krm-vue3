@@ -3,7 +3,7 @@ import type { CSSProperties } from 'vue';
 
 import { computed, shallowRef, useSlots, watchEffect } from 'vue';
 
-import { VbenScrollbar } from '@kris-core/shadcn-ui';
+import { KrisScrollbar } from '@kris-core/shadcn-ui';
 
 import { useScrollLock } from '@vueuse/core';
 
@@ -279,9 +279,9 @@ function handleMouseleave() {
     <div v-if="slots.logo" :style="headerStyle">
       <slot name="logo"></slot>
     </div>
-    <VbenScrollbar :style="contentStyle" shadow shadow-border>
+    <KrisScrollbar :style="contentStyle" shadow shadow-border>
       <slot></slot>
-    </VbenScrollbar>
+    </KrisScrollbar>
 
     <div :style="collapseStyle"></div>
     <SidebarCollapseButton
@@ -309,14 +309,14 @@ function handleMouseleave() {
       <div v-if="!extraCollapse" :style="extraTitleStyle" class="pl-2">
         <slot name="extra-title"></slot>
       </div>
-      <VbenScrollbar
+      <KrisScrollbar
         :style="extraContentStyle"
         class="border-border py-2"
         shadow
         shadow-border
       >
         <slot name="extra"></slot>
-      </VbenScrollbar>
+      </KrisScrollbar>
     </div>
   </aside>
 </template>

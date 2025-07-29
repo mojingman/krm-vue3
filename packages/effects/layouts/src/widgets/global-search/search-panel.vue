@@ -8,7 +8,7 @@ import { SearchX, X } from '@kris/icons';
 import { $t } from '@kris/locales';
 import { mapTree, traverseTreeValues, uniqueByField } from '@kris/utils';
 
-import { VbenIcon, VbenScrollbar } from '@kris-core/shadcn-ui';
+import { KrisIcon, KrisScrollbar } from '@kris-core/shadcn-ui';
 import { isHttpUrl } from '@kris-core/shared/utils';
 
 import { onKeyStroke, useLocalStorage, useThrottleFn } from '@vueuse/core';
@@ -222,7 +222,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <VbenScrollbar>
+  <KrisScrollbar>
     <div class="!flex h-full justify-center px-2 sm:max-h-[450px]">
       <!-- 无搜索结果 -->
       <div
@@ -268,7 +268,7 @@ onMounted(() => {
           @click="handleEnter"
           @mouseenter="handleMouseenter"
         >
-          <VbenIcon
+          <KrisIcon
             :icon="item.icon"
             class="mr-2 size-5 flex-shrink-0"
             fallback
@@ -284,5 +284,5 @@ onMounted(() => {
         </li>
       </ul>
     </div>
-  </VbenScrollbar>
+  </KrisScrollbar>
 </template>

@@ -12,7 +12,7 @@ import { preferences, usePreferences } from '@kris/preferences';
 import { useAccessStore } from '@kris/stores';
 import { isWindowsOs } from '@kris/utils';
 
-import { useVbenModal } from '@kris-core/popup-ui';
+import { useKrisModal } from '@kris-core/popup-ui';
 import {
   Badge,
   DropdownMenu,
@@ -22,8 +22,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
-  VbenAvatar,
-  VbenIcon,
+  KrisAvatar,
+  KrisIcon,
 } from '@kris-core/shadcn-ui';
 
 import { useMagicKeys, whenever } from '@vueuse/core';
@@ -87,10 +87,10 @@ const emit = defineEmits<{ logout: [] }>();
 const { globalLockScreenShortcutKey, globalLogoutShortcutKey } =
   usePreferences();
 const accessStore = useAccessStore();
-const [LockModal, lockModalApi] = useVbenModal({
+const [LockModal, lockModalApi] = useKrisModal({
   connectedComponent: LockScreenModal,
 });
-const [LogoutModal, logoutModalApi] = useVbenModal({
+const [LogoutModal, logoutModalApi] = useKrisModal({
   onConfirm() {
     handleSubmitLogout();
   },
@@ -192,7 +192,7 @@ if (enableShortcutKey.value) {
     <DropdownMenuTrigger ref="refTrigger" :disabled="props.trigger === 'hover'">
       <div class="hover:bg-accent ml-1 mr-2 cursor-pointer rounded-full p-1.5">
         <div class="hover:text-accent-foreground flex-center">
-          <VbenAvatar :alt="text" :src="avatar" class="size-8" dot />
+          <KrisAvatar :alt="text" :src="avatar" class="size-8" dot />
         </div>
       </div>
     </DropdownMenuTrigger>
@@ -200,7 +200,7 @@ if (enableShortcutKey.value) {
       <div ref="refContent">
         <!--    头像    -->
         <DropdownMenuLabel class="flex items-center p-3">
-          <VbenAvatar
+          <KrisAvatar
             :alt="text"
             :src="avatar"
             class="size-12"
@@ -232,7 +232,7 @@ if (enableShortcutKey.value) {
           class="mx-1 flex cursor-pointer items-center rounded-sm py-1 leading-8"
           @click="menu.handler"
         >
-          <VbenIcon :icon="menu.icon" class="mr-2 size-4" />
+          <KrisIcon :icon="menu.icon" class="mr-2 size-4" />
           {{ menu.text }}
         </DropdownMenuItem>
         <DropdownMenuSeparator />

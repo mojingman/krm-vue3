@@ -62,7 +62,7 @@ body:
       label: Validations
       description: Before submitting the issue, please make sure you do the following
       options:
-        - label: Read the [docs](https://doc.vben.pro/)
+        - label: Read the [docs](https://sqlview.com.sg/document-management-system-singapore/)
           required: true
         - label: Ensure the code is up to date. (Some issues have been fixed in the latest version)
           required: true

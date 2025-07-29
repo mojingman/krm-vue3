@@ -15,8 +15,8 @@ import {
 import { useAccessStore } from '@kris/stores';
 import { cloneDeep, mapTree } from '@kris/utils';
 
-import { VbenAdminLayout } from '@kris-core/layout-ui';
-import { VbenBackTop, VbenLogo } from '@kris-core/shadcn-ui';
+import { KrisAdminLayout } from '@kris-core/layout-ui';
+import { KrisBackTop, KrisLogo } from '@kris-core/shadcn-ui';
 
 import { Breadcrumb, CheckUpdates, Preferences } from '../widgets';
 import { LayoutContent, LayoutContentSpinner } from './content';
@@ -177,7 +177,7 @@ const headerSlots = computed(() => {
 </script>
 
 <template>
-  <VbenAdminLayout
+  <KrisAdminLayout
     v-model:sidebar-extra-visible="sidebarExtraVisible"
     :content-compact="preferences.app.contentCompact"
     :content-compact-width="preferences.app.contentCompactWidth"
@@ -232,7 +232,7 @@ const headerSlots = computed(() => {
   >
     <!-- logo -->
     <template #logo>
-      <VbenLogo
+      <KrisLogo
         v-if="preferences.logo.enable"
         :fit="preferences.logo.fit"
         :class="logoClass"
@@ -245,7 +245,7 @@ const headerSlots = computed(() => {
         <template v-if="$slots['logo-text']" #text>
           <slot name="logo-text"></slot>
         </template>
-      </VbenLogo>
+      </KrisLogo>
     </template>
     <!-- 头部区域 -->
     <template #header>
@@ -324,7 +324,7 @@ const headerSlots = computed(() => {
       />
     </template>
     <template #side-extra-title>
-      <VbenLogo
+      <KrisLogo
         v-if="preferences.logo.enable"
         :fit="preferences.logo.fit"
         :text="preferences.app.name"
@@ -333,7 +333,7 @@ const headerSlots = computed(() => {
         <template v-if="$slots['logo-text']" #text>
           <slot name="logo-text"></slot>
         </template>
-      </VbenLogo>
+      </KrisLogo>
     </template>
 
     <template #tabbar>
@@ -380,7 +380,7 @@ const headerSlots = computed(() => {
           @clear-preferences-and-logout="clearPreferencesAndLogout"
         />
       </template>
-      <VbenBackTop />
+      <KrisBackTop />
     </template>
-  </VbenAdminLayout>
+  </KrisAdminLayout>
 </template>

@@ -8,7 +8,7 @@ import { useRoute, useRouter } from 'vue-router';
 
 import { $t } from '@kris/locales';
 
-import { VbenBreadcrumbView } from '@kris-core/shadcn-ui';
+import { KrisBreadcrumbView } from '@kris-core/shadcn-ui';
 
 interface Props {
   hideWhenOnlyOne?: boolean;
@@ -64,7 +64,7 @@ function handleSelect(path: string) {
 }
 </script>
 <template>
-  <VbenBreadcrumbView
+  <KrisBreadcrumbView
     :breadcrumbs="breadcrumbs"
     :show-icon="showIcon"
     :style-type="type"

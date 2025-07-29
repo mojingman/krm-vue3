@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { VbenFormSchema } from '@kris/common-ui';
+import type { KrisFormSchema } from '@kris/common-ui';
 import type { Recordable } from '@kris/types';
 
 import { computed, ref, useTemplateRef } from 'vue';
@@ -32,10 +32,10 @@ function sendCodeApi(phoneNumber: string) {
     }, 3000);
   });
 }
-const formSchema = computed((): VbenFormSchema[] => {
+const formSchema = computed((): KrisFormSchema[] => {
   return [
     {
-      component: 'VbenInput',
+      component: 'KrisInput',
       componentProps: {
         placeholder: $t('authentication.mobile'),
       },
@@ -49,7 +49,7 @@ const formSchema = computed((): VbenFormSchema[] => {
         }),
     },
     {
-      component: 'VbenPinInput',
+      component: 'KrisPinInput',
       componentProps: {
         codeLength: CODE_LENGTH,
         createText: (countdown: number) => {

@@ -7,8 +7,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-  VbenCountToAnimator,
-  VbenIcon,
+  KrisCountToAnimatortar,
+  KrisIcon,
 } from '@kris-core/shadcn-ui';
 
 interface Props {
@@ -33,17 +33,17 @@ withDefaults(defineProps<Props>(), {
         </CardHeader>
 
         <CardContent class="flex items-center justify-between">
-          <VbenCountToAnimator
+          <KrisCountToAnimatortar
             :end-val="item.value"
             :start-val="1"
             class="text-xl"
             prefix=""
           />
-          <VbenIcon :icon="item.icon" class="size-8 flex-shrink-0" />
+          <KrisIcon :icon="item.icon" class="size-8 flex-shrink-0" />
         </CardContent>
         <CardFooter class="justify-between">
           <span>{{ item.totalTitle }}</span>
-          <VbenCountToAnimator
+          <KrisCountToAnimatortar
             :end-val="item.totalValue"
             :start-val="1"
             prefix=""
