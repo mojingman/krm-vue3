@@ -54,8 +54,6 @@ export async function run(options: RunOptions) {
       await Promise.all([
         execaCommand('pnpm -F @kris/playground run dev', { stdio: 'inherit' }), // 5555
         execaCommand('pnpm -F @kris/web-antd run dev', { stdio: 'inherit' }), // 5666
-        execaCommand('pnpm -F @kris/web-ele run dev', { stdio: 'inherit' }), // 5777
-        execaCommand('pnpm -F @kris/web-naive run dev', { stdio: 'inherit' }), // 5888
       ]);
       return;
     }

@@ -485,7 +485,7 @@ catalogs:
       version: 2.2.10
     vxe-pc-ui:
       specifier: ^4.7.12
-      version: 4.7.30
+      version: 4.8.0
     vxe-table:
       specifier: ^4.14.4
       version: 4.14.8
@@ -1513,7 +1513,7 @@ importers:
         version: 3.5.18(typescript@5.8.3)
       vxe-pc-ui:
         specifier: 'catalog:'
-        version: 4.7.30(vue@3.5.18(typescript@5.8.3))
+        version: 4.8.0(vue@3.5.18(typescript@5.8.3))
       vxe-table:
         specifier: 'catalog:'
         version: 4.14.8(vue@3.5.18(typescript@5.8.3))
@@ -10039,8 +10039,8 @@ packages:
       typescript:
         optional: true
 
-  vxe-pc-ui@4.7.30:
-    resolution: {integrity: sha512-gnsNLvzn4r8L2pYURx1R7BkQWlEB3vEV9407FyhrN+vQ2oCVmR8EeI3krmjfCaQV7WNtsEsgskdu64osTzYJJQ==}
+  vxe-pc-ui@4.8.0:
+    resolution: {integrity: sha512-7qlKSJrqOLGrAs62HO6qjBWq9Qp9YKwEQYqsQM3Xhrk2PZNenPR8U3XCbqsv+cmAIYwg4qtKlcxxRYOMibmepQ==}
 
   vxe-table@4.14.8:
     resolution: {integrity: sha512-aEvBm+DSNCJ2U2yGP8GHMaYEsL7UJxgoCynt8ZWgJ7LT/vW4nBK3FgQdcKbElUmXAJ5+dgyKhRIT4jVDFRthBA==}
@@ -19569,7 +19569,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.3
 
-  vxe-pc-ui@4.7.30(vue@3.5.18(typescript@5.8.3)):
+  vxe-pc-ui@4.8.0(vue@3.5.18(typescript@5.8.3)):
     dependencies:
       '@vxe-ui/core': 4.2.8(vue@3.5.18(typescript@5.8.3))
     transitivePeerDependencies:
@@ -19577,7 +19577,7 @@ snapshots:
 
   vxe-table@4.14.8(vue@3.5.18(typescript@5.8.3)):
     dependencies:
-      vxe-pc-ui: 4.7.30(vue@3.5.18(typescript@5.8.3))
+      vxe-pc-ui: 4.8.0(vue@3.5.18(typescript@5.8.3))
     transitivePeerDependencies:
       - vue
 
