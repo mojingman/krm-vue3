@@ -1,3 +1,5 @@
+import { defineEventHandler } from 'h3';
+
 export default defineEventHandler(() => {
   return `
 <h1>Hello KRIS KRM</h1>
